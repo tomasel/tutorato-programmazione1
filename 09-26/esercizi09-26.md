@@ -24,7 +24,7 @@ Presi due numeri interi stampare la parte intera della divisione e il resto.
 
 ## Esercizio 5
 
-Preso un numero in ingresso, scrivere la tabellina di quel numero da 0 a 10.
+Preso un numero in ingresso, scrivere la tabellina di quel numero da 0 a 10 (senza for).
 
 ## Esercizio 6
 
