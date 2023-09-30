@@ -2,11 +2,14 @@
 
 ## 1 Cifrario di Cesare
 
-Presi in ingresso una lettera (maiuscola o minuscola) e un numero intero minore di 26, cifrare la lettera con il cifrario di Cesare. Controllare i dati inseriti e, se necessario, segnalare sullo standard error il problema (ad esempio `cerr << "numero troppo grande";`).
+Presi in ingresso una lettera (maiuscola o minuscola) e un numero intero minore di 26, cifrare la lettera con il cifrario di Cesare.
+Controllare i dati inseriti e, se necessario, segnalare sullo standard error il problema (ad esempio `cerr << "numero troppo grande";`)
+e terminare il programma.
 
 ## 2
 
-Come l'esercizio 1, ma questa volta decifrare la lettera.
+Come l'esercizio 1, ma questa volta decifrare la lettera. Invece di terminare il programma se l'input ricevuto è errato,
+chiedere all'utente di inserire un nuovo valore (utilizzare un while o do-while).
 
 ## 3.a Parità e controllo `if`
 
