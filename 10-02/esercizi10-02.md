@@ -2,11 +2,11 @@
 
 ## Esercizio 1
 
-Presi in ingresso una lettera e un numero intero minore di 26, cifrare la lettera con il cifrario di Cesare.
+Presi in ingresso una lettera (maiuscola o minuscola) e un numero intero minore di 26, cifrare la lettera con il cifrario di Cesare. Controllare i dati inseriti e, se necessario, segnalare sullo standard error il problema (ad esempio `cerr << "numero troppo grande";`).
 
 ## Esercizio 2
 
-Presi in ingresso una lettera e un numero intero minore di 26, decifrare la lettera secondo il cifrario di Cesare.
+Come l'esercizio 1, ma questa volta decifrare la lettera.
 
 ## Esercizio 3.a
 
