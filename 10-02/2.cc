@@ -3,10 +3,10 @@
 using namespace std;
 
 #define ALPHDIM 26
-#define UPCASELOW 'A'-1
-#define UPCASEHIG 'Z'+1
-#define LOCASELOW 'a'-1
-#define LOCASEHIG 'z'+1
+#define UPCASELOW 'A' - 1 // sottraggo e aggiungo 1 per evitare di riscriverlo nei controlli if
+#define UPCASEHIG 'Z' + 1
+#define LOCASELOW 'a' - 1
+#define LOCASEHIG 'z' + 1
 
 int main () {
 
@@ -33,10 +33,11 @@ int main () {
 
   // Se il carattere è maiuscolo, stampa la sua cifratura maiuscola, altrimenti stampa
   // quella minuscola
+  // Attenzione: il +1 è necessario per correggere i +1 e -1 definiti nelle costanti
   if (c > UPCASELOW && c < UPCASEHIG)
-    cout << (char)((c + n - UPCASELOW) % ALPHDIM + UPCASELOW) << endl;
+    cout << (char)((c - n - UPCASELOW + ALPHDIM + 1) % ALPHDIM + UPCASELOW + 1) << endl;
   else
-    cout << (char)((c + n - LOCASELOW) % ALPHDIM + LOCASELOW) << endl;
+    cout << (char)((c - n - LOCASELOW + ALPHDIM + 1) % ALPHDIM + LOCASELOW + 1) << endl;
 
   return EXIT_SUCCESS;
 }
