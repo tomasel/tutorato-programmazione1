@@ -46,13 +46,7 @@ Preso un numero in ingresso, scrivere la tabellina di quel numero da 0 a 10 usan
 Modificare il ciclo dell'esercizio precedente in modo che il programma continui a chiedere numeri di cui stampare
 la tabellina. Terminare il programma solo se il numero inserito è 0. 
 
-## 7 Codifica
-
-Preso in ingresso un numero naturale, trasformarlo in binario.
-
-Dato il numero 200 il binario è: 11001000
-
-## 8
+## 7 Conversion binario-decimale
 
 Prendere in ingresso il numero `n` di cifre binarie da trasformare in decimale. Quindi prendere in ingresso le `n` 
 cifre binarie e infine stampare a video il decimale corrispondente. 
@@ -60,7 +54,7 @@ cifre binarie e infine stampare a video il decimale corrispondente.
 Per esempio, preso `n=5` e le cifre binarie `1 0 1 0 1`, il valore decimale corrispondente è
 21. 
 
-## 9 Fattoriale
+## 8 Fattoriale
 
 Scrivere un programma che, preso in ingresso un numero, calcoli il suo fattoriale. 
 
@@ -76,6 +70,16 @@ fattoriale di:
 - $3! = 1\times 2\times 3 = 6$
 - $10! = 1\times 2\times 3\times 4\times ... \times 10 = 3628800$
 
-## 10 Calcolatrice
+## 9 Calcolatrice
 
 Scrivere un programma che implementi una calcolatrice per numeri interi, ossia che prenda in ingresso due numeri e un carattere ('+','-','*','/') e che calcoli poi il risultato dell'operazione.
+
+# 10.a Calcolatrice, la vendetta
+
+Riprendere il programma dell'esercizio 9. Una volta fatta la prima operazione, il programma continua a richiedere un nuovo operatore e un nuovo numero fintanto che non viene inserito il simbolo \$. Ogni volta che un nuovo numero e operatore vengono inseriti, il programma esegue l'operazione mettendo come primo numero il risultato ottenuto precedentemente e come secondo il nuovo numero. 
+
+Per esempio, il programma prende in ingresso due numeri all'inizio 3 e 4 e l'operatore *. Esegue l'operazione e ottiene 12. Se l'utente ora inserisce l'operatore \$, il programma termina, altrimenti se inserisce per esempio il simbolo / e successivamente il numero 2, verrà eseguita la divisione 12/2 e stampato il valore. 
+
+# 10.b Calcolatrice, il ritorno
+
+Considerare la possibilità che i valori inseriti non siano degli  interi. 
