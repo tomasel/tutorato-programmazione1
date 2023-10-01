@@ -3,10 +3,10 @@
 using namespace std;
 
 #define ALPHDIM 26
-#define UPCASELOW 'A'-1
-#define UPCASEHIG 'Z'+1
-#define LOCASELOW 'a'-1
-#define LOCASEHIG 'z'+1
+#define UPCASELOW 64
+#define UPCASEHIG 91
+#define LOCASELOW 96
+#define LOCASEHIG 123
 
 int main () {
 
