@@ -48,7 +48,7 @@ la tabellina. Terminare il programma solo se il numero inserito è 0.
 
 ## 7 Codifica
 
-Preso in ingresso un numero minore di 256, trasformarlo in binario.
+Preso in ingresso un numero naturale, trasformarlo in binario.
 
 Dato il numero 200 il binario è: 11001000
 
