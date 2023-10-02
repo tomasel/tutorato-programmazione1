@@ -2,22 +2,26 @@
 
 using namespace std;
 
-#define ALPHDIM 26
-#define UPCASELOW 64
-#define UPCASEHIG 91
-#define LOCASELOW 96
-#define LOCASEHIG 123
+// calcolo i valori ASCII di a, z, A, Z
+#define ALPHDIM ((int)'z' - (int)'a' + 1) // 26
+#define UPCASELOW ((int)'A' - 1) // 64
+#define UPCASEHIG ((int)'Z' + 1) // 91
+#define LOCASELOW ((int)'a' - 1) // 96
+#define LOCASEHIG ((int)'z' + 1) // 123
+
 
 int main () {
 
-  int n;
+  int shift;
   char c;
+
+  cout << ALPHDIM << " " << UPCASELOW << " " << UPCASEHIG << " " << LOCASELOW << " " << LOCASEHIG << endl;
 
   // Leggo n e controllo che non sia più grande di 26
   // (potrei anche decidere di accettare qualsiasi numero positivo e considerarlo in mod26)
-  cin >> n;
+  cin >> shift;
 
-  if (n < 0 || n > ALPHDIM) {
+  if (shift < 0 || shift > ALPHDIM) {
     cerr << "numero troppo grande" << endl;
     return EXIT_FAILURE;
   }
@@ -34,9 +38,9 @@ int main () {
   // Se il carattere è maiuscolo, stampa la sua cifratura maiuscola, altrimenti stampa
   // quella minuscola
   if (c > UPCASELOW && c < UPCASEHIG)
-    cout << (char)((c + n - UPCASELOW) % ALPHDIM + UPCASELOW) << endl;
+    cout << (char)((c + shift - UPCASELOW) % ALPHDIM + UPCASELOW) << endl;
   else
-    cout << (char)((c + n - LOCASELOW) % ALPHDIM + LOCASELOW) << endl;
+    cout << (char)((c + shift - LOCASELOW) % ALPHDIM + LOCASELOW) << endl;
 
   return EXIT_SUCCESS;
 }
