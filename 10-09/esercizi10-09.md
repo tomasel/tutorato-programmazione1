@@ -1,0 +1,71 @@
+# Puntatori e riferimenti
+
+## 1
+
+Dati in input prezzo e sconto, scrivere una funzione che calcoli il costo scontato.
+Scrivere la funzione con passaggio per valore, per indirizzo e per riferimento.
+
+## 2
+
+Scrivere una funzione `void mySwap (int*, int*)` che esegua lo scambio tra due variabili intere.
+
+## 3
+
+Scrivere una funzione `void genericSwap (void*, void*, bool)` che esegua un controllo sul parametro booleano e decida se eseguire uno scambio tra puntatori di tipo `int` o di tipo `char`.
+
+# Figure
+
+Mostrare a video le seguenti figure (sfruttare loop e condizioni):
+
+## 4.1
+
+```
+x   x   x   x   x
+
+x               x
+
+x               x
+
+x               x
+
+x   x   x   x   x
+```
+
+## 4.2
+
+```
+x       x       x
+
+    x   x   x
+
+x   x   x   x   x
+
+    x   x   x
+
+x       x       x
+```
+
+## 4.3
+
+```
+o   H   H   H   o
+
+-   o   H   o   H
+
+-   -   o   H   H   
+
+-   o   -   o   H
+
+o   -   -   -   o
+```
+
+# Ricorsione e iterazione
+
+## 5
+
+Scrivere una funzione ricorsiva che calcoli la somma tra due numeri interi **positivi**.
+
+## 6
+
+Scrivere una funzione ricorsiva che calcoli il fattoriale di un qualsiasi numero intero.
+Riscrivere poi la sua versione iterativa (quale delle due è più efficiente?).
