@@ -3,11 +3,11 @@
 ## 1
 
 Dati in input prezzo e sconto, scrivere una funzione che calcoli il costo scontato.
-Scrivere la funzione con passaggio per valore, per indirizzo e per riferimento.
+Scrivere la funzione con passaggio per valore, per indirizzo e per riferimento (che differenze ci sono?).
 
 ## 2
 
-Scrivere una funzione `void mySwap (int*, int*)` che esegua lo scambio tra due variabili intere.
+Scrivere una funzione `void mySwap (int*, int*)` che esegua lo scambio dei valori di due variabili tipo `int`.
 
 ## 3
 
