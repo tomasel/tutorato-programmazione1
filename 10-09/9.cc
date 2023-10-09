@@ -9,14 +9,14 @@ using namespace std;
 
 void genericSwap(void* p1, void* p2, bool b){
     if(b){
-        int* tmp = (int*)p1;
-        p1 = p2;
-        p2 = tmp;
+        int tmp = *(int*)p1;
+        *(int*)p1 = *(int*)p2;
+        *(int*)p2 = tmp;
     }
     else{
-        char* tmp = (char*)p1;
-        p1 = p2;
-        p2 = tmp;
+        char tmp = *(char*)p1;
+        *(char*)p1 = *(char*)p2;
+        *(char*)p2 = tmp;
     }
 }
 
