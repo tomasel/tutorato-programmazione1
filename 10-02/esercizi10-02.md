@@ -83,3 +83,7 @@ Per esempio, il programma prende in ingresso due numeri all'inizio 3 e 4 e l'ope
 # 10.b Calcolatrice, il ritorno
 
 Considerare la possibilità che i valori inseriti non siano degli  interi. 
+
+# 11 Palindromi
+
+Dato un numero qualsiasi in ingresso, dire se il numero è palindromo, ossia se il numero può essere letto da destra a sinistra e viceversa. Per esempio 2002 e 30403 sono palindomi, mentre 2012 o 40340 non lo sono. 
