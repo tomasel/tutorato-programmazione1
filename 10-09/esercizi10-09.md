@@ -69,3 +69,13 @@ Scrivere una funzione ricorsiva che calcoli la somma tra due numeri interi **pos
 
 Scrivere una funzione ricorsiva che calcoli il fattoriale di un qualsiasi numero intero.
 Riscrivere poi la sua versione iterativa (quale delle due è più efficiente?).
+
+Bonus: 
+Usare la libreria std::chrono::steady_clock per misurare quanto ogni funzione impiega.
+Per ottenere un tempo attuale è possibile usare:
+
+```
+chrono::time_point<std::chrono::steady_clock> start = chrono::steady_clock::now();
+```
+
+Prendendo il tempo prima e dopo la funzione che si vuole misurare (tempo1 e tempo2) è possibile sottrarli (tempo2 - tempo1) e ottenere la durata 
