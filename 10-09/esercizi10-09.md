@@ -85,7 +85,7 @@ La libreria `cstdlib` contiene due funzioni per generare numeri randomici. La pr
 che prende in ingresso un "seed", ossia un valore di inizializzazione e deve essere chiamata una sola volta all'inizio
 del main. Per il nostro scopo possiamo scegliere un qualsiasi valore di inizializzazione, diciamo 13. La seconda funzione
 è `int rand()` che genera un numero casuale. Per avere un numero casuale limitato in un certo range $[A,B)$, possiamo 
-scrivere `rand() % B + A`.
+scrivere `rand() % (B - A + 1) + A`.
 
 ```C++
 #include<cstdlib>
