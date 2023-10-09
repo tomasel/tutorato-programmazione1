@@ -3,23 +3,28 @@ Scrivere una funzione ricorsiva che calcoli la somma tra due numeri interi posit
 */
 
 #include <iostream>
+
 using namespace std;
 
-int somma(int a, int b){
-    if (b == 0){
-        return a;
-    }
-    else{
-        return somma(a+1,b-1);
-    }
+int sommaRic(int a, int b) {
+  if (a == 0)
+    return b;
+  if (b == 0)
+    return a;
+  return sommaRic(a - 1, b - 1) + 2;
 }
 
-int main(){
-    int a = 0, b = 0;
-    cout << "Inserisci il primo numero: ";
-    cin >> a;
-    cout << "Inserisci il secondo numero: ";
-    cin >> b;
+int main () {
 
-    cout << "La somma tra " << a << " e " << b << " è " << somma(a,b) << endl;
+  int a, b;
+  
+  cout << "a: ";
+  cin >> a;
+
+  cout << "b: ";
+  cin >> b;
+
+  cout << sommaRic(a, b) << endl;
+
+  return 0;
 }
