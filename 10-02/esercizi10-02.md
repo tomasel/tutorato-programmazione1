@@ -86,4 +86,5 @@ Considerare la possibilità che i valori inseriti non siano degli  interi.
 
 # 11 Palindromi
 
-Dato un numero qualsiasi in ingresso, dire se il numero è palindromo, ossia se il numero può essere letto da destra a sinistra e viceversa. Per esempio 2002 e 30403 sono palindomi, mentre 2012 o 40340 non lo sono. 
+Letto in input un numero tra 0 e 1000000 esclusi, dire se il numero è palindromo, ossia se il numero può essere letto da destra a sinistra e viceversa. Per esempio 2002 e 30403 sono palindomi, mentre 2012 o 40340 non lo sono. 
+
