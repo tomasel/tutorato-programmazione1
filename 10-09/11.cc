@@ -1,11 +1,10 @@
-
-
 /*
 Scrivere una funzione ricorsiva che calcoli il fattoriale di un qualsiasi numero intero.
 Riscrivere poi la sua versione iterativa (quale delle due è più efficiente?).
 */
 
 #include <iostream>
+// #include <chrono>
 
 using namespace std;
 
@@ -26,7 +25,7 @@ int fattoriale_iter(int n){
 int main(){
     int n = 5;
 
-    // benchmark thse two functions
+    // benchmark these two functions
 
     // std::chrono::time_point<std::chrono::steady_clock> start = chrono::steady_clock::now();
     cout << "fattoriale(" << n << ") = " << fattoriale(n) << endl;

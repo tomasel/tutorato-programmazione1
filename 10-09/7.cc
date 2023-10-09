@@ -3,15 +3,15 @@
 using namespace std;
 
 float costo(float prezzo, float sconto) {
-  return prezzo * sconto;
+  return prezzo - prezzo * sconto / 100.0;
 }
 
 float costoI(float* prezzo, float* sconto) {
-  return *prezzo * *sconto;
+  return *prezzo - *prezzo * *sconto / 100.0;
 }
 
 float costoR(float& prezzo, float& sconto) {
-  return prezzo * sconto;
+  return prezzo - prezzo * sconto / 100.0;
 }
 
 int main () {

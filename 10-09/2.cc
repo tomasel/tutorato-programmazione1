@@ -1,25 +1,23 @@
-#include <iostream>
+/*
+Scrivere un programma che, dato un numero in ingresso, ne stampi tutti i suoi divisori.
+*/
 
+#include <iostream>
 using namespace std;
 
-void mySwap (int* p1, int* p2) {
-  int tmp = *p1;
-  *p1 = *p2;
-  *p2 = tmp;
-}
+int main() {
+    int n;
+    cout << "Inserisci un numero: ";
+    cin >> n;
 
-int main () {
-
-  int a, b;
-
-  cout << "a: ";
-  cin >> a;
-  cout << "b: ";
-  cin >> b;
-
-  mySwap(&a, &b);
-  
-  cout << "a: " << a << endl << "b: " << b << endl;
-
-  return 0;
+    cout << "I divisori di " << n << " sono: ";
+    
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            cout << i << " ";
+        }
+    }
+    
+    cout << endl;
+    return 0;
 }
