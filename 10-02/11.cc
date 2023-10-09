@@ -9,7 +9,14 @@ using namespace std;
 int main()
 {
   int n;
+  cout << "Inserisci un numero minore di 1000000: "
   cin >> n;
+
+  while(n>1000000){
+    cout << "Numero inserito troppo grande" << endl;
+    cout << "Inserisci un numero minore di 1000000: "
+    cin >> n;
+  }
 
   int n2 = n;
   int n3 = 0;
