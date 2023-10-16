@@ -44,3 +44,13 @@ Bonus: Riscrivere la funzione usando il passaggio di parametri per riferimento.
 ## 6 
 
 Dato in input un numero `n`, in maniera ricorsiva chiedere all'utente di inserire una lettera per `n` volte e, sapendo che le lettere in maiuscolo valgono 10 mentre quelle in minuscolo valgono 5, calcolare e stampare a video la somma totale. È possibile usare la funzione `islower(char)` contenuta nella libreria `cctype` per controllare che il carattere in input sia minuscolo.
+
+## 7 
+
+Dato un array inizializzato in modo casuale, ordinarlo usando *StalinSort*, descritto nella seguente procedura: 
+
+- Confrontare i due valori iniziali nell'array;
+- Se il primo è maggiore del secondo, eliminalo (settando a 0).
+- Ripeti per tutti i valori
+
+
