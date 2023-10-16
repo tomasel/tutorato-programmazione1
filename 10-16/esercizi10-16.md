@@ -33,7 +33,9 @@ Creare una funzione che riceve un numero e restituisce la somma delle cifre del 
 Ad esempio:
 
 1. riceve 15, esegue `f(15) = 1 + 5 = 6`, restituisce 6
-2. riceve 392, esegue `f(392) = 3 + 9 + 2 = 14 > 10`, `f(14) = 1 + 4 =  5`, restituisce 5
+2. riceve 392, esegue `f(392) = 3 + 9 + 2 = 14 > 10`, `f(14) = 1 + 4 = 5`, restituisce 5
+
+(*suggerimento: usare una funzione d'appoggio ricorsiva che controlli la somma*)
 
 ## 4 
 
