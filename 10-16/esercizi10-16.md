@@ -9,11 +9,17 @@ Riscrivere poi la sua versione iterativa (quale delle due è più efficiente?).
 Usare la libreria `std::chrono::steady_clock` per misurare quanto ogni funzione impiega.
 Per ottenere un tempo attuale è possibile usare:
 
-```
-chrono::time_point<std::chrono::steady_clock> start = chrono::steady_clock::now();
+```C++ {.numberLines}
+chrono::time_point<chrono::steady_clock> start, end;
+chrono::duration<double> time_span;
+
+start = chrono::steady_clock::now(); // inizia a contare
+// chiamata alla funzione
+end = chrono::steady_clock::now();
+time_span = chrono::duration_cast<chrono::duration<double>>(end - start); // durata
 ```
 
-Prendendo il tempo prima e dopo la funzione che si vuole misurare (tempo1 e tempo2) è possibile sottrarli (tempo2 - tempo1) e ottenere la durata.
+Prendendo il tempo prima e dopo la funzione che si vuole misurare (`start` e `end`) è possibile sottrarli e ottenere la durata.
 
 ## 2 (9 ottobre)
 
