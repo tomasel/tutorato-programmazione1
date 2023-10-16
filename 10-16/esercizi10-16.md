@@ -59,4 +59,22 @@ Dato un array inizializzato in modo casuale, ordinarlo usando *StalinSort*, desc
 - Se il primo è maggiore del secondo, eliminalo (settando a 0).
 - Ripeti per tutti i valori
 
+## 8
+
+FoldLeft è un'operazione molto usata nella programmazione funzionale. Solitamente prende come parametro un array, un valore iniziale e lo step a cui siamo nel'array. La funzione viene applicata a tutti gli elementi dell'array, partendo dal primo, e il risultato viene passato come parametro alla funzione per il prossimo elemento. 
+
+Ad esempio, se abbiamo un array di interi e vogliamo calcolare la somma di tutti gli elementi, possiamo usare la funzione `foldLeft` in questo modo:
+
+```
+int foldLeft(array, init) { 
+    val = get_valore_from_array(array); 
+    return foldLeft(array, init + val);
+};
+```
+
+Scrivere una funzione `foldLeft` che prenda in input un array, un valore iniziale e l'indice corrente, e restituisca il massimo valore dell'array.
+
+NB: alcuni step sono mancanti nella funzione precedente, è necessario aggiungerli per farla funzionare.
+
+Hint: è necessario aggiungere un caso base per la ricorsione.
 
