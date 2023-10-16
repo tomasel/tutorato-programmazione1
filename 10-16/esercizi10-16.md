@@ -6,7 +6,7 @@ Si vuole calcolare il fattoriale di un qualsiasi numero intero (positivo) sfrutt
 Riscrivere poi la sua versione iterativa (quale delle due è più efficiente?).
 
 *Bonus*:  
-Usare la libreria `std::chrono::steady_clock` per misurare quanto ogni funzione impiega.
+Usare la libreria `chrono` (`#include <chrono>`) per misurare quanto ogni funzione impiega.
 Per ottenere un tempo attuale è possibile usare:
 
 ```C++ {.numberLines}
