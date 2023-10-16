@@ -13,7 +13,7 @@ Per ottenere un tempo attuale è possibile usare:
 chrono::time_point<std::chrono::steady_clock> start = chrono::steady_clock::now();
 ```
 
-Prendendo il tempo prima e dopo la funzione che si vuole misurare (tempo1 e tempo2) è possibile sottrarli (tempo2 - tempo1) e ottenere la durata 
+Prendendo il tempo prima e dopo la funzione che si vuole misurare (tempo1 e tempo2) è possibile sottrarli (tempo2 - tempo1) e ottenere la durata.
 
 ## 2 (9 ottobre)
 
