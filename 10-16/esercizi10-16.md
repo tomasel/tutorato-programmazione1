@@ -2,11 +2,11 @@
 
 ## 1 (9 ottobre)
 
-Scrivere una funzione ricorsiva che calcoli il fattoriale di un qualsiasi numero intero.
+Si vuole calcolare il fattoriale di un qualsiasi numero intero (positivo) sfruttando una funzione ricorsiva.  
 Riscrivere poi la sua versione iterativa (quale delle due è più efficiente?).
 
-Bonus: 
-Usare la libreria std::chrono::steady_clock per misurare quanto ogni funzione impiega.
+*Bonus*:  
+Usare la libreria `std::chrono::steady_clock` per misurare quanto ogni funzione impiega.
 Per ottenere un tempo attuale è possibile usare:
 
 ```
@@ -19,7 +19,7 @@ Prendendo il tempo prima e dopo la funzione che si vuole misurare (tempo1 e temp
 
 Scrivere una funzione ricorsiva che calcoli la somma tra due numeri interi **positivi**.
 
-Bonus: calcolare anche prodotto e potenza (ad esempio con `potenzaRicorsiva(int base, int esponente)`).
+Bonus: calcolare anche prodotto e potenza (ad esempio con `int potenzaRicorsiva(int base, int esponente)`).
 
 ## 3
 
@@ -27,8 +27,7 @@ Creare una funzione che riceve un numero e restituisce la somma delle cifre del 
 Ad esempio:
 
 1. riceve 15, esegue `f(15) = 1 + 5 = 6`, restituisce 6
-2. riceve 392, esegue `f(392) = 3 + 9 + 2 = 14 > f(14) = 1 + 4 =  5`, restituisce 5
-
+2. riceve 392, esegue `f(392) = 3 + 9 + 2 = 14 > 10`, `f(14) = 1 + 4 =  5`, restituisce 5
 
 ## 4 
 
@@ -44,7 +43,4 @@ Bonus: Riscrivere la funzione usando il passaggio di parametri per riferimento.
 
 ## 6 
 
-Dato in input un numero n dall'utente, in maniera ricorsiva chiedere all'utente di inserire una lettera per n volte e, sapendo che le lettere in maiuscolo valgono 10 mentre quelle in minuscolo valgono 5, calcolare e stampare a video la somma totale.
-
-    è possibile usare la funzione islower(char) contenuta nella libreria cctype per controllare che il carattere in input sia minuscolo
-
+Dato in input un numero `n`, in maniera ricorsiva chiedere all'utente di inserire una lettera per `n` volte e, sapendo che le lettere in maiuscolo valgono 10 mentre quelle in minuscolo valgono 5, calcolare e stampare a video la somma totale. È possibile usare la funzione `islower(char)` contenuta nella libreria `cctype` per controllare che il carattere in input sia minuscolo.
