@@ -28,3 +28,16 @@ Ad esempio:
 
 1. riceve 15, esegue `f(15) = 1 + 5 = 6`, restituisce 6
 2. riceve 392, esegue `f(392) = 3 + 9 + 2 = 14 > f(14) = 1 + 4 =  5`, restituisce 5
+
+
+## 4 
+
+Data una media iniziale e un numero di crediti totali acquisiti, far inserire all'utente il voto e i crediti di un nuovo esame e scrivere una funzione per ricalcolare la nuova media pesata. 
+
+Bonus: Scrivere una funzione con passaggio per valore, una con passaggio per riferimento e una con passaggio per puntatore. Provare ad eseguire ognuna delle funzioni e capire cosa succede.
+
+## 5 
+
+Dati in input tre interi positivi in tre variabili (n1, n2, n3), scrivere una funzione che con una procedura “ri-ordini” i numeri in ordine crescente.
+
+Bonus: Riscrivere la funzione usando il passaggio di parametri per riferimento.
