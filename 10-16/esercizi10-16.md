@@ -41,3 +41,10 @@ Bonus: Scrivere una funzione con passaggio per valore, una con passaggio per rif
 Dati in input tre interi positivi in tre variabili (n1, n2, n3), scrivere una funzione che con una procedura “ri-ordini” i numeri in ordine crescente.
 
 Bonus: Riscrivere la funzione usando il passaggio di parametri per riferimento.
+
+## 6 
+
+Dato in input un numero n dall'utente, in maniera ricorsiva chiedere all'utente di inserire una lettera per n volte e, sapendo che le lettere in maiuscolo valgono 10 mentre quelle in minuscolo valgono 5, calcolare e stampare a video la somma totale.
+
+    è possibile usare la funzione islower(char) contenuta nella libreria cctype per controllare che il carattere in input sia minuscolo
+
