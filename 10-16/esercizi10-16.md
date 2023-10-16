@@ -61,11 +61,11 @@ Dato un array inizializzato in modo casuale, ordinarlo usando *StalinSort*, desc
 
 ## 8
 
-FoldLeft è un'operazione molto usata nella programmazione funzionale. Solitamente prende come parametro un array, un valore iniziale e lo step a cui siamo nel'array. La funzione viene applicata a tutti gli elementi dell'array, partendo dal primo, e il risultato viene passato come parametro alla funzione per il prossimo elemento. 
+FoldLeft è un'operazione molto usata nella programmazione funzionale. Solitamente prende come parametro un array, un valore iniziale e lo step a cui siamo nell'array. La funzione viene applicata a tutti gli elementi dell'array, partendo dal primo, e il risultato viene passato come parametro alla funzione per il prossimo elemento. 
 
 Ad esempio, se abbiamo un array di interi e vogliamo calcolare la somma di tutti gli elementi, possiamo usare la funzione `foldLeft` in questo modo:
 
-```
+```C++ {.numberLines}
 int foldLeft(array, init) { 
     val = get_valore_from_array(array); 
     return foldLeft(array, init + val);
