@@ -28,6 +28,8 @@ Valore massimo in [2, 2]
 
 Scrivere una procedura che calcoli il prodotto tra due matrici quadrate inizializzate randomicamente con valori tra `[0, 10]` e stampi a video il risultato.
 
+\newpage
+
 # Ordinamento
 
 ## 4
