@@ -28,26 +28,9 @@ Valore massimo in [2, 2]
 
 Scrivere una procedura che calcoli il prodotto tra due matrici quadrate inizializzate randomicamente con valori tra `[0, 10]` e stampi a video il risultato.
 
-## 4
-
-Scrivere un programma che chieda all'utente le dimensioni di una matrice di interi e la inizializzi a valori casuali fino a 100. Dovranno essere stampati gli elementi dal valore massimo per ciascuna riga.
-
-```
-Number of rows: 3
-Number of cols: 3
-
-11 25 78 
-43  5 96 
- 2 81 54
-
-max row 1 => 78
-max row 2 => 96
-max row 3 => 81
-```
-
 # Ordinamento
 
-## 5
+## 4
 
 Si vuole scrivere una procedura particolare per copiare il contenuto di un array di dimensione *m* (`arr_m`) in uno di dimensione *n* (`arr_n`), con *m* < *n*. 
 Si nota subito che l'array di dimensione *m* non ha sufficienti elementi per poter riempire completamente l'array di dimensione *n*, perciò si decide di completare i valori mancanti generandone di nuovi:
@@ -81,7 +64,7 @@ l'array `arr_n` conterrà `[1, 0, 2, 0, 0]`.
 
 \newpage
 
-## 6
+## 5
 
 Seguendo la procedura precedente, una volta ottenuti gli array con i valori generati, ordinarli utilizzando un algoritmo di ordinamento a scelta (SimpleSort, BubbleSort, MergeSort, QuickSort, ...).  
 Alternativamente, provare ad implementare un algoritmo di ordinamento definito dalle seguenti operazioni:
