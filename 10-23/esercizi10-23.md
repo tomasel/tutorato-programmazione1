@@ -26,7 +26,7 @@ Valore massimo in [2, 2]
 
 ## 3
 
-Scrivere una procedura che calcoli il prodotto tra due matrici quadrate inizializzate randomicamente con valori tra `[0, 10]` e stampi a video il risultato.
+Scrivere una procedura che calcoli il prodotto tra due matrici quadrate inizializzate randomicamente con valori tra `[0, 10]` e stampi a video il risultato. Si possono utilizzare più funzioni separate a supporto.
 
 \newpage
 
@@ -40,7 +40,8 @@ Si nota subito che l'array di dimensione *m* non ha sufficienti elementi per pot
   - se `arr_m` è ordinato (sia crescente che decrescente), i nuovi valori saranno ottenuti "specchiando" gli *m* precedenti
   - se `arr_m` non è ordinato, i nuovi valori saranno degli zeri
 
-non si fanno assunzioni sulla contiguità dei valori nell'array `m`, inoltre i valori generati saranno sempre aggiunti *dopo* quelli contenuti in `arr_m`.
+non si fanno assunzioni sulla contiguità dei valori nell'array `m`, inoltre i valori generati saranno sempre aggiunti *dopo* quelli contenuti in `arr_m`.  
+La procedura deve sfruttare l'aritmetica dei puntatori dove possibile e/o sensato.  
 Ad esempio:
 
 ```.cpp
