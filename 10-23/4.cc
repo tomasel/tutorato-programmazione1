@@ -31,14 +31,10 @@ int main () {
       cout << "prossimo valore" << endl;
   }
 
-  for (int i = 0; i < m; ++i)
-    cout << arr_m[i] << " ";
-
   copiaSpecchio(arr_m, arr_n, m, n); 
 
   for (int i = 0; i < n; ++i)
     cout << arr_n[i] << " ";
-
   cout << endl;
 
   return 0;
