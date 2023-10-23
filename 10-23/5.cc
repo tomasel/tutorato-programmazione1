@@ -3,8 +3,8 @@ using namespace std;
 
 #define MAX 20
 #define MIN 0
-#define M 4
-#define N 15
+#define M 5
+#define N 13
 
 bool crescente(int*, int);
 bool decrescente(int*, int);
@@ -26,7 +26,7 @@ int main () {
 
   copiaSpecchio(arr_m, arr_n, M, N); 
 
-  for (int i = 0; i < N; ++i)
+  for (int i = 0; i < N+2; ++i)
     cout << arr_n[i] << " ";
   cout << endl;
 
@@ -48,7 +48,8 @@ void copiaSpecchio(int* arr_m, int* arr_n, int m, int n) {
         if (i % 2)
           arr_n[i * m + j] = arr_m[m - j%m - 1];
         else
-          arr_n[i * m + j] = arr_m[j%m];
+          if (i * m + j >= n) break;
+          else arr_n[i * m + j] = arr_m[j%m];
       }
     }
   } else {
