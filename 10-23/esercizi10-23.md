@@ -37,7 +37,7 @@ Scrivere una procedura che calcoli il prodotto tra due matrici quadrate iniziali
 Si vuole scrivere una procedura particolare per copiare il contenuto di un array di dimensione *m* (`arr_m`) in uno di dimensione *n* (`arr_n`), con *m* < *n*. 
 Si nota subito che l'array di dimensione *m* non ha sufficienti elementi per poter riempire completamente l'array di dimensione *n*, perciò si decide di completare i valori mancanti generandone di nuovi:
 
-  - se `arr_m` è ordinato (sia crescente che decrescente), i nuovi valori saranno ottenuti "specchiando" gli *m - 1* precedenti
+  - se `arr_m` è ordinato (sia crescente che decrescente), i nuovi valori saranno ottenuti "specchiando" gli *m* precedenti
   - se `arr_m` non è ordinato, i nuovi valori saranno degli zeri
 
 non si fanno assunzioni sulla contiguità dei valori nell'array `m`, inoltre i valori generati saranno sempre aggiunti *dopo* quelli contenuti in `arr_m`.
@@ -48,14 +48,14 @@ int arr_m[5] = {1, 2, 4, 7, 8};
 int arr_n[8];
 ```
 
-l'array `arr_n` conterrà `[1, 2, 4, 7, 8, 7, 4, 2]`.
+l'array `arr_n` conterrà `[1, 2, 4, 7, 8, 8, 7, 4]`.
 
 ```.cpp
 int arr_m[5] = {11, 7, 6, 4, 2};
 int arr_n[14];
 ```
 
-l'array `arr_n` conterrà `[11, 7, 6, 4, 2, 4, 6, 7, 11, 7, 6, 4, 2, 4]`.
+l'array `arr_n` conterrà `[11, 7, 6, 4, 2, 2, 4, 6, 7, 11, 11, 7, 6, 4]`.
 
 ```.cpp
 int arr_m[3] = {1, 0, 2};
