@@ -1,85 +1,49 @@
+// Scrivere una procedura che calcoli il prodotto tra due matrici quadrate inizializzate randomicamente con valori tra `[0, 10]` e stampi a video il risultato.
+
 #include <iostream>
+
 using namespace std;
 
-#define MAX 20
+#define DIM 5
+#define MAX 10
 #define MIN 0
 
-bool crescente(int*, int);
-bool decrescente(int*, int);
-bool ordinato(int*, int);
-void copiaSpecchio(int*, int*, int, int);
-
-int main () {
-
-  int m = 0;
-  int n = 0;
-
-  cout << "Inserisci m: "; cin >> m;
-
-  do {
-    cout << "Inserisci n > m: "; cin >> n;
-  } while (n < m);
-
-  int arr_m[m];
-  int arr_n[n];
-
-  cout << "Inserisci valori" << endl;
-
-  for (int i = 0; i < m; ++i) {
-    cin >> arr_m[i];
-    if (i != m - 1)
-      cout << "prossimo valore" << endl;
-  }
-
-  copiaSpecchio(arr_m, arr_n, m, n); 
-
-  for (int i = 0; i < n; ++i)
-    cout << arr_n[i] << " ";
-  cout << endl;
-
-  return 0;
-}
-
-bool ordinato(int* arr, int m) {
-  return crescente(arr, m) || decrescente(arr, m);
-}
-
-void copiaSpecchio(int* arr_m, int* arr_n, int m, int n) {
-  if (ordinato(arr_m, m)) {
-    // considero arr_n come una "matrice"
-    // siccome è un array, sfrutto gli indici per gestirlo
-    // come se fosse disposto in n/m righe lunghe m
-    // (l'ultima riga può essere più corta di m)
-    for (int i = 0; i < n/m + 1; ++i) {
-      for (int j = 0; j < m; ++j) {
-        if (!(i % 2))
-          arr_n[i * m + j] = arr_m[m - j%m - 1];
-        else
-          arr_n[i * m + j] = arr_m[j%m];
+void prod_matr(int m1[][DIM], int m2[][DIM], int res[][DIM]) {
+  for (int i = 0; i < DIM; i++) {
+    for (int j = 0; j < DIM; j++) {
+      res[i][j] = 0;
+      for (int k = 0; k < DIM; k++) {
+        res[i][j] += m1[i][k] * m2[k][j];
       }
     }
-  } else {
-    for (int i = 0; i < n; ++i) {
-      if (i < m)
-        arr_n[i] = arr_m[i];
-      else
-        arr_n[i] = 0;
+  }
+}
+
+void init(int matrix[][DIM]){
+  for(int i = 0; i < DIM; i++){
+    for(int j = 0; j < DIM; j++){
+      matrix[i][j] = rand() % (MAX - MIN + 1) + MIN;
     }
   }
 }
 
-bool decrescente(int* arr, int m) {
-  for (int i = 1; i < m; ++i) {
-    if (arr[i - 1] < arr[i])
-      return false;
+void print_matrix(int matrix[][DIM]){
+  cout << endl;
+  for(int i = 0; i < DIM; i++){
+    for(int j = 0; j < DIM; j++){
+      cout << matrix[i][j] <<"\t";
+    }
+    cout << endl;
   }
-  return true;
+  cout << endl;
 }
 
-bool crescente(int* arr, int m) {
-  for (int i = 1; i < m; ++i) {
-    if (arr[i - 1] > arr[i])
-      return false;
-  }
-  return true;
+int main(){
+  int m1[DIM][DIM], m2[DIM][DIM], res[DIM][DIM];
+  init(m1);
+  init(m2);
+  prod_matr(m1, m2, res);
+  print_matrix(m1);
+  print_matrix(m2);
+  print_matrix(res);
 }

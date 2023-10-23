@@ -1,49 +1,52 @@
-// Scrivere una procedura che calcoli il prodotto tra due matrici quadrate inizializzate randomicamente con valori tra `[0, 10]` e stampi a video il risultato.
+/*
+Scrivere una procedura che presi in ingresso le dimensioni $M$, $N$ della
+matrice $(MxN)$ e un vettore di dimensione $N$, aggiunga il vettore ad ogni
+riga della matrice: 
+
+```
+Mat[3][4] = [
+  [1,2,3,4],
+  [5,6,7,8],
+  [9,0,1,2]
+]
+
+V[4] = [1,2,3,4]
+
+Res[3][4] = [
+  [2,4,6,8],
+  [6,8,10,11],
+  [10,2,4,6]
+]
+```
+*/
 
 #include <iostream>
-
 using namespace std;
 
-#define DIM 5
-#define MAX 10
-#define MIN 0
-
-void prod_matr(int m1[][DIM], int m2[][DIM], int res[][DIM]) {
-  for (int i = 0; i < DIM; i++) {
-    for (int j = 0; j < DIM; j++) {
-      res[i][j] = 0;
-      for (int k = 0; k < DIM; k++) {
-        res[i][j] += m1[i][k] * m2[k][j];
-      }
-    }
+void addVectorToMatrix(int M, int N, int matrix[][N], int vector[N]) {
+  for (int i = 0; i < M; i++) {
+    for (int j = 0; j < N; j++)
+      matrix[i][j] += vector[j];
   }
 }
 
-void init(int matrix[][DIM]){
-  for(int i = 0; i < DIM; i++){
-    for(int j = 0; j < DIM; j++){
-      matrix[i][j] = rand() % (MAX - MIN + 1) + MIN;
-    }
-  }
-}
+int main() {
+  int M = 3, N = 4;
 
-void print_matrix(int matrix[][DIM]){
-  cout << endl;
-  for(int i = 0; i < DIM; i++){
-    for(int j = 0; j < DIM; j++){
-      cout << matrix[i][j] <<"\t";
-    }
+  int matrix[M][N] = {
+    {1,2,3,4},
+    {5,6,7,8},
+    {9,0,1,2}
+  };
+  int vector[N] = {1,2,3,4};
+
+  addVectorToMatrix(M, N, matrix, vector);
+
+  for (int i = 0; i < M; i++) {
+    for (int j = 0; j < N; j++)
+      cout << matrix[i][j] << " ";
     cout << endl;
   }
-  cout << endl;
-}
 
-int main(){
-  int m1[DIM][DIM], m2[DIM][DIM], res[DIM][DIM];
-  init(m1);
-  init(m2);
-  prod_matr(m1, m2, res);
-  print_matrix(m1);
-  print_matrix(m2);
-  print_matrix(res);
+  return 0;
 }
