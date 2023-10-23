@@ -53,7 +53,7 @@ Scrivere una procedura che calcoli il prodotto tra due matrici quadrate iniziali
 
 ## 5
 
-Si vuole scrivere una procedura particolare per copiare il contenuto di un array di dimensione *m* (`arr_m`) in uno di dimensione *n* (`arr_n`), con *m* < *n*. Sia le dimensioni dei due array che i valori in `arr_m` devono essere inseriti dall'utente.  
+Si vuole scrivere una procedura particolare per copiare il contenuto di un array di dimensione *m* (`arr_m`) in uno di dimensione *n* (`arr_n`), con *m* < *n*. I valori in `arr_m` devono essere inseriti dall'utente, mentre *m* e *n* vanno dichiarati come costanti.  
 Si nota subito che l'array di dimensione *m* non ha sufficienti elementi per poter riempire completamente l'array di dimensione *n*, perciò si decide di completare i valori mancanti generandone di nuovi:
 
   - se `arr_m` è ordinato (sia crescente che decrescente), i nuovi valori saranno ottenuti "specchiando" gli *m* precedenti
@@ -127,7 +127,7 @@ Qual è la complessità di questo algoritmo? In quali casi può essere poco prat
 
 Scrivere una procedura che
 
-- riempia di 1 e 0 una matrice di dimensione 10x10,
+- riempia di 1 e 0 una matrice di dimensione $10\times 10$,
 - la stampi a video
 - dica quanti gruppi di 1 in celle vicine ci sono. Due celle sono vicine se sono sulla stessa colonna o se sono sulla stessa riga. 
 
@@ -147,7 +147,7 @@ In questo caso ci sono 5 gruppi di 1. In alto a sinistra c'è un gruppo di nove 
 
 Bonus point per dire quali sono le dimensioni dei gruppi. 
 
-Modificare poi la procedura in modo che le dimensioni siano $100x100$ e che la matrice venga stampata solo se la somma delle dimensioni sia minore o uguale a **20**.
+Modificare poi la procedura in modo che le dimensioni siano $100 \times 100$ e che la matrice venga stampata solo se la somma delle dimensioni sia minore o uguale a **20**.
 
 Tips will be added later.
 
