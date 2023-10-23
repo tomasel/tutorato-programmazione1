@@ -1,3 +1,10 @@
+---
+header-includes:
+    - '\usepackage[a4paper]{geometry}'
+documentclass: article
+fontsize: 12pt
+---
+
 # Figure
 
 Mostrare a video le seguenti figure (sfruttare loop e condizioni):

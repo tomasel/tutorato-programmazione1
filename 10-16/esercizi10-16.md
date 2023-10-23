@@ -1,3 +1,10 @@
+---
+header-includes:
+    - '\usepackage[a4paper]{geometry}'
+documentclass: article
+fontsize: 12pt
+---
+
 # Ricorsione e iterazione
 
 ## 1 (9 ottobre)

@@ -1,3 +1,10 @@
+---
+header-includes:
+    - '\usepackage[a4paper]{geometry}'
+documentclass: article
+fontsize: 12pt
+---
+
 # Esercizi 02-10-2023
 
 ## 1 Cifrario di Cesare
