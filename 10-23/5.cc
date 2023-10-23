@@ -45,7 +45,7 @@ void copiaSpecchio(int* arr_m, int* arr_n, int m, int n) {
     // (l'ultima riga può essere più corta di m)
     for (int i = 0; i < n/m + 1; ++i) {
       for (int j = 0; j < m; ++j) {
-        if (!(i % 2))
+        if (i % 2)
           arr_n[i * m + j] = arr_m[m - j%m - 1];
         else
           arr_n[i * m + j] = arr_m[j%m];
