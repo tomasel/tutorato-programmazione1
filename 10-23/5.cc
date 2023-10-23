@@ -26,7 +26,7 @@ int main () {
 
   copiaSpecchio(arr_m, arr_n, M, N); 
 
-  for (int i = 0; i < N+2; ++i)
+  for (int i = 0; i < N; ++i)
     cout << arr_n[i] << " ";
   cout << endl;
 
