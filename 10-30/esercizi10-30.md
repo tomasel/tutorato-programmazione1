@@ -31,20 +31,25 @@ $ ./conta "word word 11 word"
 3
 ```
 
-*Hint*: la funzione `isalpha(char)` ritorna un intero non nullo se il carattere ricevuto è alfabetico
+*Hint*
+
+La funzione `isalpha(char)` ritorna un intero non nullo se il carattere ricevuto è alfabetico, zero altrimenti.
 
 ## 4
 
-Scrivere un programma che permetta all'utente di sostituire tutte le occorrenze di una sottostringa in un testo con un'altra stringa. L'utente dovrà inserire
+Scrivere un programma che permetta all'utente di sostituire tutte le occorrenze di una sottostringa in un testo con un'altra stringa. La stringa da cercare si intende formata da caratteri contigui nel testo in cui la si cerca.  
+Ad esempio
 
-- il testo
-- la stringa da cercare
-- la stringa nuova da inserire
+```
+$ ./sostituisci
+Testo: testo inserito dall'utente
+Sostituisci: testo
+Con: problema
 
-La stringa da cercare si intende formata da caratteri contigui nel testo in cui la si cerca.
-Inoltre è necessario assicurarsi che la stringa nuova sia lunga tanto quanto la sottostringa cercata; se questo non accade, segnalarlo opportunamente all'utente e chiedere di immetere una nuova stringa, indicando sia la stringa che si sta cercando sia la sua lunghezza.
+problema inserito dall'utente
+```
 
-# I/O da terminale
+# I/O
 
 ## 5
 
@@ -64,8 +69,6 @@ err: divisione per zero
 $ ./calcolatrice 3 / 2
 1.50
 ```
-
-# I/O da file
 
 ## 6
 
@@ -87,7 +90,7 @@ Scrivere un programma che stampi a video il numero di occorrenze di ciascun cara
 
 Scrivere un programma che prenda in ingresso due file di testo (`input.txt` e `output.txt`). Il file `output.txt` dovrà contenere le stesse parole del file `input.txt`, ma dovranno essere *censurate* sostituendo tutte le lettere in maiuscolo con '\*'. La procedura di censura di una stringa dovrà essere ricorsiva.
 
-*Note*  
+*Note*
 
 - È possibile usare la funzione `strlen` e `isupper`, incluse in `cstring`
 - Fare tutti i controlli del caso
