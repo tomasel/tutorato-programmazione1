@@ -6,7 +6,7 @@ int main(){
 
   ifstream in ("input.txt");
 
-  int count[256] = {};//init to zero
+  int count[256] = {}; //init to zero
   char c;
 
   if(in.fail()){
@@ -15,7 +15,7 @@ int main(){
   }
 
   while(in >> c){
-    count[c] += 1;
+    count[(int) c] += 1;
   }
 
   for(int i = 0; i < 256; i++){
