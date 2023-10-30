@@ -27,9 +27,11 @@ eritrevni ad agnirts
 Scrivere un programma che conti quante parole sono presenti in una stringa passata come argomento. Ad esempio
 
 ```{.sh}
-$ ./conta "word1 word2 3 word3"
-4
+$ ./conta "word word 11 word"
+3
 ```
+
+*Hint*: la funzione `isalpha(char)` ritorna un intero non nullo se il carattere ricevuto è alfabetico
 
 ## 4
 
