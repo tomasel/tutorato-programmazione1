@@ -28,3 +28,5 @@ Aiuto: Definire una persona con i campi:
   
 Dove madre e padre sono a loro volta struct di tipo persona.
 
+Aiuto: inizializzare le persone che chiudolo l'albero (es. i nonni) con NULL, in modo da poter controllarne la presenza ed evitare seg. fault 
+
