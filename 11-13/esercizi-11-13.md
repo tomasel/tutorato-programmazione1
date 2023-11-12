@@ -37,6 +37,8 @@ Scrivere un programma che permetta la gestione di una serie di macchine tramite 
 ```
 struct LinkedList {
  // attributi utili
+ // (...)
+ // puntatore all'item successivo nella lista
  LinkedList * next; 
 }; 
 ```
