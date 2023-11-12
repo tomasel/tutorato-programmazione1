@@ -30,3 +30,24 @@ Dove madre e padre sono a loro volta struct di tipo persona.
 
 Aiuto: inizializzare le persone che chiudolo l'albero (es. i nonni) con NULL, in modo da poter controllarne la presenza ed evitare seg. fault 
 
+## 3
+
+Scrivere un programma che permetta la gestione di una serie di macchine tramite `LinkedList`, definita nel seguente modo: 
+
+```
+struct LinkedList {
+ // attributi utili
+ LinkedList * next; 
+}; 
+```
+
+### 3.1
+Scrivere una funzione che permetta di stampare tutti gli item all'interno della lista
+
+### 3.2
+Scrivere una funzione che ricerchi un determinato item all'interno della lista e lo rimuova. 
+
+**N.B**: non è necessario de-allocare l'oggetto, basta manipolare il campo *next*
+
+Usare la funzione creata in 3.1 per controllare che l'oggetto sia effettivamente stato rimosso
+
