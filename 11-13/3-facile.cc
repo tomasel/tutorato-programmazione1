@@ -7,22 +7,22 @@ struct Persona {
   char nome[50];
   char madre[50];
   char padre[50];
-  int numeroFigli;
+  int numeroFigli = 0;
 };
 
 
 int main() {
   Persona Persone[10] = {
-    {"Giulia", "Anna", "Mario", 0},
-    {"Anna", "Maria", "Luigi", 0},
-    {"Mario", "", "", 0},
-    {"Maria", "", "", 0},
-    {"Luigi", "", "", 0},
-    {"Giorgio", "Anna", "Mario", 0},
-    {"Gianni", "Anna", "Mario", 0},
-    {"Giangiacomo", "Anna", "Luigi", 0},
-    {"Gianmarria", "Anna", "Luigi", 0},
-    {"Michela", "Anna", "Mario", 0},
+    {"Giulia", "Anna", "Mario"},
+    {"Anna", "Maria", "Luigi"},
+    {"Mario", "", ""},
+    {"Maria", "", ""},
+    {"Luigi", "", ""},
+    {"Giorgio", "Anna", "Mario"},
+    {"Gianni", "Anna", "Mario"},
+    {"Giangiacomo", "Anna", "Luigi"},
+    {"Gianmarria", "Anna", "Luigi"},
+    {"Michela", "Anna", "Mario"}
   };
 
   // Trova persona con maggior numeri di figli

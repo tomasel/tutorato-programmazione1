@@ -32,12 +32,16 @@ Basta che il programma gestisca una sola collisione e stampi le velocità finali
 Un'agenzia del farmaco ha un grosso database per categorizzare i farmaci che usa. Il database memorizza le seguenti informazioni:
 id del farmaco, numero di molecole (<256), numero di altri farmaci con cui interagisce, numero di test condotti, numero di reazioni avverse. 
 
-Il database può essere scaricato dal Google Drive. Leggere il file, caricare i dati in memoria e successivamente dare le seguenti informazioni:
+Il database può essere scaricato dal Google Drive. 
+
+`id numero_molecole numero_interazioni numero_test numero_reazioni`
+
+Leggere il file, caricare i dati in memoria e successivamente dare le seguenti informazioni:
 
 - Numero totale di farmaci;
 - Qual è il farmaco con il maggior numero di reazioni avverse;
 - Qual è il farmaco più pericoloso, ossia quello con il rapporto (reazioni avverse)/(test condotti) più alto;
-- Quale farmaco continiene il maggior numero di molecole;
+- Quale farmaco contiene il maggior numero di molecole;
 - Quali sono i farmaci che hanno un numero di interazioni con altri farmaci sopra la media.
 
 ## 3 -- Facile
@@ -52,7 +56,7 @@ Stampare a video qual è il genitore con più figli. Per fare questo potete aggi
 
 Cercare poi di trovare un algoritmo che permetta di scoprire anche chi è il nonno/a con più nipoti senza però modificare i campi della struttura ulteriormente. 
 
-Per un esempio più completo, potete scaricare il database "albero_genealogico.txt" dal Google Drive. 
+Per un esempio più completo, potete scaricare il database "albero_genealogico.txt" dal Google Drive dove la prima riga indica il numero di Persone nel dataset e quelle seguenti sono nella forma `nome genitore1 genitore2`. 
 
 ## 3 -- Difficile
 
