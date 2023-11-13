@@ -99,3 +99,16 @@ Scrivere una funzione che ricerchi un determinato item all'interno della lista e
 **N.B**: non è necessario de-allocare l'oggetto, basta manipolare il campo `next`
 
 Usare la funzione creata in `3.1` per controllare che l'oggetto sia effettivamente stato rimosso
+
+# 4
+
+Creare un programma per gestire una macchinetta del caffè a povo, che contenga i campi 
+`caffe` e `credito` che indichino rispettivamente il numero di caffè rimanenti 
+e il credito dell'utente. 
+
+Implementare le funzioni 
+
+- `void addCoin(CoffeeMachine * machine, int val)` che aggiunge `val` centesimi al credito
+- `bool getCoffee(CoffeeMachine * machine)` che restituisce `true` se è possibile 
+  erogare un caffè (ovvero se il credito è almeno 39 centesimi e ci sono caffè rimanenti), 
+  altrimenti restituisce `false` e non eroga il caffè.
