@@ -5,9 +5,51 @@ documentclass: article
 fontsize: 12pt
 ---
 
+# Allocazione dinamica
+
+## 1.1
+
+Dato in ingresso un array di interi dall'utente (dovrà essere allocato dinamicamente, chiedendo la lunghezza all'utente), scrivere una funzione `filter` ricorsiva, la quale ritorna un array contenente solo gli elementi pari contenuti nell'array in input.
+
+### Firma delle funzioni da scrivere
+
+- `int* filter(int*, int, int&)`
+- `int* filter_rec(int*, int, int, int&)`
+
+
+## 1.2
+
+Dato in ingresso le dimensioni di una matrice di interi, scrivere una funzione che restituisca la matrice trasposta.
+
+### Note
+- Ricordarsi di **deallocare**!
+- La matrice deve essere inizializzata con valori random tra `[0,10]`
+- La funzione che calcola la trasposta **non** deve essere ricorsiva
+
+
+## 1.3
+
+Scrivere un programma che chieda all'utente le dimensioni di una matrice di interi, e prenda i valori sempre da terminale.
+Una volta inserita la matrice a schermo deve essere mostrato l'elemento dal valore massimo per ciascuna riga.
+
+```shell
+Number of rows: 3
+Number of cols: 3
+Insert values: 
+1 2 3 4 5 6 7 8 9
+1 2 3 
+4 5 6 
+7 8 9 
+max row 1 => 3
+max row 2 => 6
+max row 3 => 9
+```
+
+
+
 # Strutture dati
 
-## 1
+## 2.1
 
 Scrivere un programma che gestisca la collisione in una dimensione tra due blocchi caratterizzati da due proprietà: 
 
@@ -27,7 +69,7 @@ Dove $m_1$ e $m_2$ sono le masse dei due blocchi, $v_1$ e $v_2$ le velocità ini
  
 Basta che il programma gestisca una sola collisione e stampi le velocità finali.
 
-## 2
+## 2.2
 
 Un'agenzia del farmaco ha un grosso database per categorizzare i farmaci che usa. Il database memorizza le seguenti informazioni:
 id del farmaco, numero di molecole (<256), numero di altri farmaci con cui interagisce, numero di test condotti, numero di reazioni avverse. 
@@ -44,7 +86,7 @@ Leggere il file, caricare i dati in memoria e successivamente dare le seguenti i
 - Quale farmaco contiene il maggior numero di molecole;
 - Quali sono i farmaci che hanno un numero di interazioni con altri farmaci sopra la media.
 
-## 3 -- Facile
+## 2.3 -- Facile
 
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
 Definire una struct `Persona` con gli attributi `nome`,`madre`, e `padre`. Memorizzare le struct delle persone in un array `Persone`.
@@ -58,7 +100,7 @@ Cercare poi di trovare un algoritmo che permetta di scoprire anche chi è il non
 
 Per un esempio più completo, potete scaricare il database "albero_genealogico.txt" dal Google Drive dove la prima riga indica il numero di Persone nel dataset e quelle seguenti sono nella forma `nome genitore1 genitore2`. 
 
-## 3 -- Difficile
+## 2.3 -- Difficile
 
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
 Definire una struct `Persona` con gli attributi `nome`,`madre`, `padre`, dove `madre` e `padre` sono puntatori a struct di tipo `Persona`.  
@@ -81,7 +123,7 @@ in questo caso la funzione avrà una firma del tipo `cercaPersona (AlberoPersona
 
 \newpage
 
-## 4
+## 2.4
 
 Scrivere un programma che permetta la gestione di una serie di macchine tramite `LinkedList`, definita nel seguente modo: 
 
@@ -94,11 +136,11 @@ struct LinkedList {
 }; 
 ```
 
-### 4.1
+### 2.4.1
 
 Scrivere una funzione che permetta di stampare tutti gli item all'interno della lista.
 
-### 4.2
+### 2.4.2
 
 Scrivere una funzione che ricerchi un determinato item all'interno della lista e lo rimuova. 
 
@@ -106,7 +148,7 @@ Scrivere una funzione che ricerchi un determinato item all'interno della lista e
 
 Usare la funzione creata in `4.1` per controllare che l'oggetto sia effettivamente stato rimosso
 
-## 5
+## 2.5
 
 Creare un programma per gestire una macchinetta del caffè a Povo, che contenga i campi 
 `caffe` e `credito` che indichino rispettivamente il numero di caffè rimanenti 
@@ -119,42 +161,7 @@ Implementare le funzioni
   erogare un caffè (ovvero se il credito è almeno 39 centesimi e ci sono caffè rimanenti), 
   altrimenti restituisce `false` e non eroga il caffè.
 
+  Creare poi un while loop che continui a chiedere all'utente se vuole inserire monete o se vuole prendere un caffè.
 
-## 10
-
-Dato in ingresso un array di interi dall'utente (dovrà essere allocato dinamicamente, chiedendo la lunghezza all'utente), scrivere una funzione `filter` ricorsiva, la quale ritorna un array contenente solo gli elementi pari contenuti nell'array in input.
-
-### Firma delle funzioni da scrivere
-
-- `int* filter(int*, int, int&)`
-- `int* filter_rec(int*, int, int, int&)`
-
-
-## 11
-
-Dato in ingresso le dimensioni di una matrice di interi, scrivere una funzione che restituisca la matrice trasposta.
-
-### Note
-- Ricordarsi di **deallocare**!
-- La matrice deve essere inizializzata con valori random tra `[0,10]`
-- La funzione che calcola la trasposta **non** deve essere ricorsiva
-
-
-## 12
-
-Scrivere un programma che chieda all'utente le dimensioni di una matrice di interi, e prenda i valori sempre da terminale.
-Una volta inserita la matrice a schermo deve essere mostrato l'elemento dal valore massimo per ciascuna riga.
-
-```shell
-Number of rows: 3
-Number of cols: 3
-Insert values: 
-1 2 3 4 5 6 7 8 9
-1 2 3 
-4 5 6 
-7 8 9 
-max row 1 => 3
-max row 2 => 6
-max row 3 => 9
-```
+Estendere poi il programma a gestire `N` macchinette del caffè con `N` preso in input all'inizio del programma. 
 
