@@ -104,7 +104,7 @@ Usare la funzione creata in `4.1` per controllare che l'oggetto sia effettivamen
 
 ## 5
 
-Creare un programma per gestire una macchinetta del caffè a povo, che contenga i campi 
+Creare un programma per gestire una macchinetta del caffè a Povo, che contenga i campi 
 `caffe` e `credito` che indichino rispettivamente il numero di caffè rimanenti 
 e il credito dell'utente. 
 
