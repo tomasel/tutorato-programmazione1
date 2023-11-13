@@ -22,8 +22,14 @@ bool getCoffee(CoffeeMachine * machine){
 }
 
 int main1() {
+    int coffee = 0;
+    int money = 0;
+    cout << "Quanti caffè sono disponibili in questa macchina?" << endl;
+    cin >> coffee;
+    cout << "Qual è il saldo iniziale?" << endl;
+    cin >> money;
 
-    CoffeeMachine machine = {2, 0};
+    CoffeeMachine machine = {coffee, money};
     bool goon = true;
 
     do {
@@ -91,9 +97,21 @@ int main2(int argc, char* argv[]){
     }
     else{
         cout << "Quante macchine devono essere create?" << endl;
+        cin >> nMachines;
+    }
+    cout << "Stiamo per creare: " << nMachines << " machinette" << endl;
+    CoffeeMachine* machines = new CoffeeMachine[nMachines];
+    for (int i=0; i<nMachines; i++){
+        int coffee = 0;
+        int money = 0;
+        cout << "Quanti caffè sono disponibili in questa macchina?" << endl;
+        cin >> coffee;
+        cout << "Qual è il saldo iniziale?" << endl;
+        cin >> money;
+        machines[i].coffee=coffee;
+        machines[i].change=money;
     }
 
-    CoffeeMachine* machines = new CoffeeMachine[nMachines];
     cout << "Sono state create " << nMachines << " macchine da caffè" << endl;
     bool goon = true;
 
@@ -106,17 +124,22 @@ int main2(int argc, char* argv[]){
                 cout << "Quanto vuoi ricaricare?" << endl;
                 int value;
                 cin >> value;
-                cout << "In quale macchina?" << endl;
                 int id;
-                cin >> id;
+                do {
+                    cout << "In quale macchina? [0-" << nMachines << "]" << endl;
+                    cin >> id;
+                } while (id < 0 || id >= nMachines);
                 addCoin(machines, value, id);
                 break;
             }
             
             case 2: {
-                cout << "Quale macchina?" << endl;
                 int id;
-                cin >> id;
+                do {
+                    cout << "Quale macchina?" << endl;
+                    cin >> id;
+                } while(id < 0 || id >= nMachines);
+
                 if (getCoffee(machines, id)) {
                     cout << "Coffee!" << endl;
                 }
@@ -127,9 +150,11 @@ int main2(int argc, char* argv[]){
             }
 
             case 3: {
-                cout << "Quale macchina?" << endl;
                 int id;
-                cin >> id;
+                do{
+                    cout << "Quale macchina? [0-" << nMachines << "]" << endl;
+                    cin >> id;
+                } while(id < 0 || id >= nMachines);
                 cout << "Il saldo è " << machines[id].change << endl;
                 break;
             }

@@ -72,7 +72,7 @@ Basta che il programma gestisca una sola collisione e stampi le velocità finali
 ## 2.2
 
 Un'agenzia del farmaco ha un grosso database per categorizzare i farmaci che usa. Il database memorizza le seguenti informazioni:
-id del farmaco, numero di molecole (<256), numero di altri farmaci con cui interagisce, numero di test condotti, numero di reazioni avverse. 
+id del farmaco, numero di molecole, numero di altri farmaci con cui interagisce, numero di test condotti, numero di reazioni avverse. 
 
 Il database può essere scaricato dal Google Drive. 
 
@@ -111,7 +111,7 @@ Scrivere una funzione `cercaPersona (Persona**, const char*)` che prenda in inpu
 - inizializzare le persone che chiudono l'albero (es. i nonni) con `NULL`, in modo da poter controllarne la presenza ed evitare seg. fault.
 - può essere utile usare `typedef` per semplificare l'uso dei puntatori, ad esempio
 
-```.cc {.numberLines}
+```{.cc .numberLines}
 struct Persona {...};
 typedef Persona * PuntatorePersona;        // punta alla singola 
                                            // istanza di Persona
@@ -127,7 +127,7 @@ in questo caso la funzione avrà una firma del tipo `cercaPersona (AlberoPersona
 
 Scrivere un programma che permetta la gestione di una serie di macchine tramite `LinkedList`, definita nel seguente modo: 
 
-```.cc {.numberLines}
+```{.cc .numberLines}
 struct LinkedList {
  // attributi utili
  // (...)
@@ -153,6 +153,7 @@ Usare la funzione creata in `4.1` per controllare che l'oggetto sia effettivamen
 Creare un programma per gestire una macchinetta del caffè a Povo, che contenga i campi 
 `caffe` e `credito` che indichino rispettivamente il numero di caffè rimanenti 
 e il credito dell'utente. 
+Prendere in input i valori iniziali.
 
 Implementare le funzioni 
 
@@ -161,7 +162,7 @@ Implementare le funzioni
   erogare un caffè (ovvero se il credito è almeno 39 centesimi e ci sono caffè rimanenti), 
   altrimenti restituisce `false` e non eroga il caffè.
 
-  Creare poi un while loop che continui a chiedere all'utente se vuole inserire monete o se vuole prendere un caffè.
+Creare poi un while loop che continui a chiedere all'utente se vuole inserire monete, se vuole prendere un caffè o se vuole sapere il saldo.
 
-Estendere poi il programma a gestire `N` macchinette del caffè con `N` preso in input all'inizio del programma. 
+Estendere poi il programma a gestire `N` macchinette del caffè con `N` preso in input all'inizio del programma. Aggiungere i dovuti controlli. 
 
