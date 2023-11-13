@@ -30,16 +30,16 @@ Basta che il programma gestisca una sola collisione e stampi le velocità finali
 ## 2
 
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
-
-*Aiuto*: Definire una persona con i campi
+Definire una struct `Persona` con gli attributi
 
 - `nome`
 - `madre`
 - `padre`
   
-dove `madre` e `padre` sono a loro volta struct di tipo `Persona`.
+dove `madre` e `padre` sono puntatori a struct di tipo `Persona`.
+Scrivere una funzione `cercaPersona (Persona**, const char*)` che prenda in input un puntatore all'albero e una stringa e cerchi se esiste una persona con quel nome (usare una procedura ricorsiva).
 
-*Aiuto*: inizializzare le persone che chiudolo l'albero (es. i nonni) con NULL, in modo da poter controllarne la presenza ed evitare seg. fault.
+*Aiuto*: inizializzare le persone che chiudono l'albero (es. i nonni) con `NULL`, in modo da poter controllarne la presenza ed evitare seg. fault.
 
 \newpage
 
