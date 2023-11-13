@@ -1,123 +1,184 @@
-/*
-Un'agenzia del farmaco ha un grosso database per categorizzare i farmaci che usa. Il database memorizza le seguenti informazioni:
-id del farmaco, numero di molecole (<256), numero di altri farmaci con cui interagisce, numero di test condotti, numero di reazioni avverse. 
-
-Il database può essere scaricato dal Google Drive. Ogni riga contiene le seguenti informazioni:
-
-`id numero_molecole numero_interazioni numero_test numero_reazioni`
-
-Leggere il file, caricare i dati in memoria e successivamente dare le seguenti informazioni:
-
-- Numero totale di farmaci;
-- Qual è il farmaco con il maggior numero di reazioni avverse;
-- Qual è il farmaco più pericoloso, ossia quello con il rapporto (reazioni avverse)/(test condotti) più alto;
-- Quale farmaco contiene il maggior numero di molecole;
-- Quali sono i farmaci che hanno un numero di interazioni con altri farmaci sopra la media.
-*/
-
 #include <iostream>
-#include <fstream>
-#include <cstring>
-#include <random>
 
 using namespace std;
 
-struct Farmaco {
-  int id;
-  int molecole;
-  int interazioni;
-  int test;
-  int reazioni;
+struct CoffeeMachine {
+    int coffee;
+    int change;
 };
 
-// Funzione per generare un dataset di prova
-void gen_dataset(){
-    ofstream file("farmaci_piccolo.txt");
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<> dis(10, 1000);
-    uniform_int_distribution<> dis_pic(0, 20);
-    uniform_int_distribution<> dis_test(1000, 100000);
-    for (int i=0; i<10; i++){
-        file << dis(gen) << " " << dis(gen) << " " << dis_pic(gen) << " " << dis_test(gen) << " " << dis_pic(gen) << endl;
-    }
-    file.close();    
+void addCoin(CoffeeMachine * machine, int val){
+    machine->change += val;
+}
 
-    ofstream file1("farmaci_grande.txt");
-    for (int i=0; i<1000; i++){
-        file1 << dis(gen) << " " << dis(gen) << " " << dis_pic(gen) << " " << dis_test(gen) << " " << dis_pic(gen) << endl;
+bool getCoffee(CoffeeMachine * machine){
+    if (machine->change >= 50 && machine->coffee > 0) {
+        machine->change -= 50;
+        machine->coffee--;
+        return true;
+    } else {
+        return false;
     }
-    file1.close();    
+}
+
+int main1() {
+    int coffee = 0;
+    int money = 0;
+    cout << "Quanti caffè sono disponibili in questa macchina?" << endl;
+    cin >> coffee;
+    cout << "Qual è il saldo iniziale?" << endl;
+    cin >> money;
+
+    CoffeeMachine machine = {coffee, money};
+    bool goon = true;
+
+    do {
+        cout << "Cosa vuoi fare?\n\t 1. Ricaricare\n\t 2. Prendere un caffè (50)\n\t 3. Sapere qual è il saldo\n\t 4. Uscire" << endl;
+        int scelta;
+        cin >> scelta;
+        switch (scelta) {
+            case 1: {
+                cout << "Quanto vuoi ricaricare?" << endl;
+                int value;
+                cin >> value;
+                addCoin(&machine, value);
+                break;
+            }
+            
+            case 2: {
+                if (getCoffee(&machine)) {
+                    cout << "Coffee!" << endl;
+                }
+                else {
+                    cout << "Non ci sono abbastanza soldi" << endl;
+                }
+                break;
+            }
+
+            case 3: {
+                cout << "Il saldo è " << machine.change << endl;
+                break;
+            }
+
+            case 4: {
+                goon = false;
+                break;
+            }
+            
+            default: { 
+                cout << "Scelta non valida!" << endl;
+                break;
+            }
+        }
+
+    } while (goon);
+
+    return 0;
+}
+
+void addCoin(CoffeeMachine * machines, int val, int id){
+    machines[id].change += val;
+}
+
+bool getCoffee(CoffeeMachine * machines, int id){
+    if (machines[id].change >= 50 && machines[id].coffee > 0) {
+        machines[id].change -= 50;
+        machines[id].coffee--;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+int main2(int argc, char* argv[]){
+    int nMachines = -1;
+    if (argc == 2){
+        nMachines = atoi(argv[1]);
+    }
+    else{
+        cout << "Quante macchine devono essere create?" << endl;
+        cin >> nMachines;
+    }
+    cout << "Stiamo per creare: " << nMachines << " machinette" << endl;
+    CoffeeMachine* machines = new CoffeeMachine[nMachines];
+    for (int i=0; i<nMachines; i++){
+        int coffee = 0;
+        int money = 0;
+        cout << "Quanti caffè sono disponibili in questa macchina?" << endl;
+        cin >> coffee;
+        cout << "Qual è il saldo iniziale?" << endl;
+        cin >> money;
+        machines[i].coffee=coffee;
+        machines[i].change=money;
+    }
+
+    cout << "Sono state create " << nMachines << " macchine da caffè" << endl;
+    bool goon = true;
+
+    do {
+        cout << "Cosa vuoi fare?\n\t 1. Ricaricare\n\t 2. Prendere un caffè\n\t 3. Sapere qual è il saldo\n\t 4. Uscire" << endl;
+        int scelta;
+        cin >> scelta;
+        switch (scelta) {
+            case 1: {
+                cout << "Quanto vuoi ricaricare?" << endl;
+                int value;
+                cin >> value;
+                int id;
+                do {
+                    cout << "In quale macchina? [0-" << nMachines << "]" << endl;
+                    cin >> id;
+                } while (id < 0 || id >= nMachines);
+                addCoin(machines, value, id);
+                break;
+            }
+            
+            case 2: {
+                int id;
+                do {
+                    cout << "Quale macchina?" << endl;
+                    cin >> id;
+                } while(id < 0 || id >= nMachines);
+
+                if (getCoffee(machines, id)) {
+                    cout << "Coffee!" << endl;
+                }
+                else {
+                    cout << "Non ci sono abbastanza soldi" << endl;
+                }
+                break;
+            }
+
+            case 3: {
+                int id;
+                do{
+                    cout << "Quale macchina? [0-" << nMachines << "]" << endl;
+                    cin >> id;
+                } while(id < 0 || id >= nMachines);
+                cout << "Il saldo è " << machines[id].change << endl;
+                break;
+            }
+
+            case 4: {
+                goon = false;
+                break;
+            }
+            
+            default: { 
+                cout << "Scelta non valida!" << endl;
+                break;
+            }
+        }
+
+    } while (goon);
+
+    delete machines;
+    return 0;
 }
 
 int main (int argc, char* argv[]){
-    // gen_dataset();
-
-    if (argc!=2){
-        cout << "Usage: " << argv[0] << " <filename>" << endl;
-        return 1;
-    }
-
-    ifstream file(argv[1]);
-
-    // Leggi tutto il file e conta le righe
-    int numeroFarmaci = 0;
-    while (!file.eof()){
-        char riga[100];
-        file.getline(riga, 100);
-        numeroFarmaci++;
-    }
-    file.close();
-
-    Farmaco* farmaci = new Farmaco[numeroFarmaci];
-
-    // Leggi il file e salva i dati in memoria
-    file.open(argv[1]);
-    int i=0; // Contatore per indice su farmaci
-    int piuAvverso = -1; // Indice del farmaco con più reazioni avverse
-    int piuPericoloso = -1; // Indice del farmaco più pericoloso
-    int piuMolecole = -1; // Indice del farmaco con più molecole
-    double mediaInterazioni = 0; // Media delle interazioni
-    while (
-        file >> farmaci[i].id
-             >> farmaci[i].molecole
-             >> farmaci[i].interazioni
-             >> farmaci[i].test
-             >> farmaci[i].reazioni){
-
-        cout << farmaci[i].id << " " << farmaci[i].molecole << " " << farmaci[i].interazioni << " " << farmaci[i].test << " " << farmaci[i].reazioni << endl;
-        
-        if (piuAvverso < 0 || farmaci[i].reazioni > farmaci[piuAvverso].reazioni){
-            piuAvverso = i;
-        }
-
-        double per = (double)farmaci[i].reazioni/farmaci[i].test;
-        double maxPer = (double)farmaci[piuPericoloso].reazioni/farmaci[piuPericoloso].test;
-        if (piuPericoloso < 0 || per > maxPer){
-            piuPericoloso = i;
-        }
-
-        if (piuMolecole < 0 || farmaci[i].molecole > farmaci[piuMolecole].molecole){
-            piuMolecole = i;
-        }
-
-        i++;
-    }
-    mediaInterazioni /= numeroFarmaci;
-
-    cout << "Ci sono " << numeroFarmaci << " farmaci nel database." << endl;
-    cout << "Il farmaco con più reazioni avverse è " << farmaci[piuAvverso].id << " con " << farmaci[piuAvverso].reazioni << " reazioni avverse." << endl;
-    cout << "Il farmaco più pericoloso è " << farmaci[piuPericoloso].id << " con " << farmaci[piuPericoloso].reazioni << " reazioni avverse e " << farmaci[piuPericoloso].test << " test." << endl;
-    cout << "Il farmaco con più molecole è " << farmaci[piuMolecole].id << " con " << farmaci[piuMolecole].molecole << " molecole." << endl;
-
-    cout << "I farmaci con più interazioni della media sono: "; 
-    for (int i=0; i<numeroFarmaci; i++){
-        if (farmaci[i].interazioni > mediaInterazioni){
-            cout << farmaci[i].id << " ";
-        }
-    }
-    cout << endl;
-
-    delete farmaci;
+    main1();
+    cout << endl << endl << "----------------" << endl << endl << endl;
+    main2(argc, argv);
     return 0;
 }

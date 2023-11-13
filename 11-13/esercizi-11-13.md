@@ -71,6 +71,25 @@ Basta che il programma gestisca una sola collisione e stampi le velocità finali
 
 ## 2.2
 
+Creare un programma per gestire una macchinetta del caffè a Povo, che contenga i campi 
+`caffe` e `credito` che indichino rispettivamente il numero di caffè rimanenti 
+e il credito dell'utente. 
+Prendere in input i valori iniziali.
+
+Implementare le funzioni 
+
+- `void addCoin(CoffeeMachine * machine, int val)` che aggiunge `val` centesimi al credito
+- `bool getCoffee(CoffeeMachine * machine)` che restituisce `true` se è possibile 
+  erogare un caffè (ovvero se il credito è almeno 39 centesimi e ci sono caffè rimanenti), 
+  altrimenti restituisce `false` e non eroga il caffè.
+
+Creare poi un while loop che continui a chiedere all'utente se vuole inserire monete, se vuole prendere un caffè o se vuole sapere il saldo.
+
+Estendere poi il programma a gestire `N` macchinette del caffè con `N` preso in input all'inizio del programma. Aggiungere i dovuti controlli. 
+
+
+## 2.3
+
 Un'agenzia del farmaco ha un grosso database per categorizzare i farmaci che usa. Il database memorizza le seguenti informazioni:
 id del farmaco, numero di molecole, numero di altri farmaci con cui interagisce, numero di test condotti, numero di reazioni avverse. 
 
@@ -86,7 +105,7 @@ Leggere il file, caricare i dati in memoria e successivamente dare le seguenti i
 - Quale farmaco contiene il maggior numero di molecole;
 - Quali sono i farmaci che hanno un numero di interazioni con altri farmaci sopra la media.
 
-## 2.3 -- Facile
+## 2.4 -- Facile
 
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
 Definire una struct `Persona` con gli attributi `nome`,`madre`, e `padre`. Memorizzare le struct delle persone in un array `Persone`.
@@ -100,7 +119,7 @@ Cercare poi di trovare un algoritmo che permetta di scoprire anche chi è il non
 
 Per un esempio più completo, potete scaricare il database "albero_genealogico.txt" dal Google Drive dove la prima riga indica il numero di Persone nel dataset e quelle seguenti sono nella forma `nome genitore1 genitore2`. 
 
-## 2.3 -- Difficile
+## 2.4 -- Difficile
 
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
 Definire una struct `Persona` con gli attributi `nome`,`madre`, `padre`, dove `madre` e `padre` sono puntatori a struct di tipo `Persona`.  
@@ -123,7 +142,7 @@ in questo caso la funzione avrà una firma del tipo `cercaPersona (AlberoPersona
 
 \newpage
 
-## 2.4
+## 2.5
 
 Scrivere un programma che permetta la gestione di una serie di macchine tramite `LinkedList`, definita nel seguente modo: 
 
@@ -136,11 +155,11 @@ struct LinkedList {
 }; 
 ```
 
-### 2.4.1
+### 2.5.1
 
 Scrivere una funzione che permetta di stampare tutti gli item all'interno della lista.
 
-### 2.4.2
+### 2.5.2
 
 Scrivere una funzione che ricerchi un determinato item all'interno della lista e lo rimuova. 
 
@@ -148,21 +167,4 @@ Scrivere una funzione che ricerchi un determinato item all'interno della lista e
 
 Usare la funzione creata in `4.1` per controllare che l'oggetto sia effettivamente stato rimosso
 
-## 2.5
-
-Creare un programma per gestire una macchinetta del caffè a Povo, che contenga i campi 
-`caffe` e `credito` che indichino rispettivamente il numero di caffè rimanenti 
-e il credito dell'utente. 
-Prendere in input i valori iniziali.
-
-Implementare le funzioni 
-
-- `void addCoin(CoffeeMachine * machine, int val)` che aggiunge `val` centesimi al credito
-- `bool getCoffee(CoffeeMachine * machine)` che restituisce `true` se è possibile 
-  erogare un caffè (ovvero se il credito è almeno 39 centesimi e ci sono caffè rimanenti), 
-  altrimenti restituisce `false` e non eroga il caffè.
-
-Creare poi un while loop che continui a chiedere all'utente se vuole inserire monete, se vuole prendere un caffè o se vuole sapere il saldo.
-
-Estendere poi il programma a gestire `N` macchinette del caffè con `N` preso in input all'inizio del programma. Aggiungere i dovuti controlli. 
 
