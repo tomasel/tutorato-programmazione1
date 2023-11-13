@@ -100,7 +100,7 @@ Scrivere una funzione che ricerchi un determinato item all'interno della lista e
 
 Usare la funzione creata in `3.1` per controllare che l'oggetto sia effettivamente stato rimosso
 
-# 4
+# 5
 
 Creare un programma per gestire una macchinetta del caffè a povo, che contenga i campi 
 `caffe` e `credito` che indichino rispettivamente il numero di caffè rimanenti 
