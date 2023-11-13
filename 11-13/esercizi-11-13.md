@@ -102,7 +102,7 @@ Scrivere una funzione che ricerchi un determinato item all'interno della lista e
 
 Usare la funzione creata in `3.1` per controllare che l'oggetto sia effettivamente stato rimosso
 
-# 5
+## 5
 
 Creare un programma per gestire una macchinetta del caffè a povo, che contenga i campi 
 `caffe` e `credito` che indichino rispettivamente il numero di caffè rimanenti 
@@ -114,3 +114,43 @@ Implementare le funzioni
 - `bool getCoffee(CoffeeMachine * machine)` che restituisce `true` se è possibile 
   erogare un caffè (ovvero se il credito è almeno 39 centesimi e ci sono caffè rimanenti), 
   altrimenti restituisce `false` e non eroga il caffè.
+
+
+## 10
+
+Dato in ingresso un array di interi dall'utente (dovrà essere allocato dinamicamente, chiedendo la lunghezza all'utente), scrivere una funzione `filter` ricorsiva, la quale ritorna un array contenente solo gli elementi pari contenuti nell'array in input.
+
+### Firma delle funzioni da scrivere
+
+- `int* filter(int*, int, int&)`
+- `int* filter_rec(int*, int, int, int&)`
+
+
+## 11
+
+Dato in ingresso le dimensioni di una matrice di interi, scrivere una funzione che restituisca la matrice trasposta.
+
+### Note
+- Ricordarsi di **deallocare**!
+- La matrice deve essere inizializzata con valori random tra `[0,10]`
+- La funzione che calcola la trasposta **non** deve essere ricorsiva
+
+
+## 12
+
+Scrivere un programma che chieda all'utente le dimensioni di una matrice di interi, e prenda i valori sempre da terminale.
+Una volta inserita la matrice a schermo deve essere mostrato l'elemento dal valore massimo per ciascuna riga.
+
+```shell
+Number of rows: 3
+Number of cols: 3
+Insert values: 
+1 2 3 4 5 6 7 8 9
+1 2 3 
+4 5 6 
+7 8 9 
+max row 1 => 3
+max row 2 => 6
+max row 3 => 9
+```
+
