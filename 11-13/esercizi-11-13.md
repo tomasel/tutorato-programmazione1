@@ -29,6 +29,19 @@ Basta che il programma gestisca una sola collisione e stampi le velocità finali
 
 ## 2
 
+Un'agenzia del farmaco ha un grosso database per categorizzare i farmaci che usa. Il database memorizza le seguenti informazioni:
+id del farmaco, numero di molecole (<256), numero di altri farmaci con cui interagisce, numero di test condotti, numero di reazioni avverse. 
+
+Il database può essere scaricato dal Google Drive. Leggere il file, caricare i dati in memoria e successivamente dare le seguenti informazioni:
+
+- Numero totale di farmaci;
+- Qual è il farmaco con il maggior numero di reazioni avverse;
+- Qual è il farmaco più pericoloso, ossia quello con il rapporto (reazioni avverse)/(test condotti) più alto;
+- Quale farmaco continiene il maggior numero di molecole;
+- Quali sono i farmaci che hanno un numero di interazioni con altri farmaci sopra la media.
+
+## 3
+
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
 
 *Aiuto*: Definire una persona con i campi
@@ -43,7 +56,7 @@ dove `madre` e `padre` sono a loro volta struct di tipo `Persona`.
 
 \newpage
 
-## 3
+## 4
 
 Scrivere un programma che permetta la gestione di una serie di macchine tramite `LinkedList`, definita nel seguente modo: 
 
