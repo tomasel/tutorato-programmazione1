@@ -13,19 +13,18 @@ Dato in ingresso un array di interi dall'utente (dovrà essere allocato dinamica
 
 ### Firma delle funzioni da scrivere
 
-- `int* filter(int*, int, int&)`{.cc}
-- `int* filter_rec(int*, int, int, int&)`{.cc}
-
+- `int* filter(int* arr_in, int len_in, int& len_out)`{.cc}
+- `int* filter_rec(int* arr_in, int len_in, int count, int& len_out)`{.cc}
 
 ## 1.2
 
 Dato in ingresso le dimensioni di una matrice di interi, scrivere una funzione che restituisca la matrice trasposta.
 
 ### Note
+
 - Ricordarsi di **deallocare**!
 - La matrice deve essere inizializzata con valori random tra `[0,10]`
 - La funzione che calcola la trasposta **non** deve essere ricorsiva
-
 
 ## 1.3
 
@@ -44,8 +43,6 @@ max row 1 => 3
 max row 2 => 6
 max row 3 => 9
 ```
-
-
 
 # Strutture dati
 
@@ -87,7 +84,6 @@ Creare poi un while loop che continui a chiedere all'utente se vuole inserire mo
 
 Estendere poi il programma a gestire `N` macchinette del caffè con `N` preso in input all'inizio del programma. Aggiungere i dovuti controlli. 
 
-
 ## 2.3
 
 Un'agenzia del farmaco ha un grosso database per categorizzare i farmaci che usa. Il database memorizza le seguenti informazioni:
@@ -125,7 +121,7 @@ Per un esempio più completo, potete scaricare il database `albero_genealogico.t
 
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
 Definire una struct `Persona` con gli attributi `nome`,`madre`, `padre`, dove `madre` e `padre` sono puntatori a struct di tipo `Persona`.  
-Scrivere una funzione `cercaPersona (Persona**, const char*)`{.cc} che prenda in input un puntatore all'albero e una stringa e cerchi se esiste una persona con quel nome (usare una procedura ricorsiva).
+Scrivere una funzione `cercaPersona (Persona**, const char*)`{.cc} che prenda in input un puntatore all'albero e nome e cerchi, se esiste, una persona con quel nome (usare una procedura ricorsiva).
 
 *Aiuto*:
 
