@@ -46,9 +46,11 @@ Scrivere un programma per permettere la ricerca in un albero genealogico tramite
 Definire una struct `Persona` con gli attributi `nome`,`madre`, e `padre`. Memorizzare le struct delle persone in un array `Persone`.
 Se una persona non ha madre o padre, lasciare il campo vuoto.
 
-Inizializzare un albero genealocico con dei valori randomici e richiedere qual è il genitore con più figli. 
+Inizializzare un albero genealocico con dei valori randomici.
 
-Cercare poi di trovare un algoritmo che permetta di scoprire anche chi è il nonno/a con più nipoti. 
+Stampare a video qual è il genitore con più figli. Per fare questo potete aggiornare i campi della struttura, aggiungerne o toglierne. 
+
+Cercare poi di trovare un algoritmo che permetta di scoprire anche chi è il nonno/a con più nipoti senza però modificare i campi della struttura ulteriormente. 
 
 Per un esempio più completo, potete scaricare il database "albero_genealogico.txt" dal Google Drive. 
 
