@@ -40,7 +40,19 @@ Il database può essere scaricato dal Google Drive. Leggere il file, caricare i 
 - Quale farmaco continiene il maggior numero di molecole;
 - Quali sono i farmaci che hanno un numero di interazioni con altri farmaci sopra la media.
 
-## 3
+## 3 -- Facile
+
+Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
+Definire una struct `Persona` con gli attributi `nome`,`madre`, e `padre`. Memorizzare le struct delle persone in un array `Persone`.
+Se una persona non ha madre o padre, lasciare il campo vuoto.
+
+Inizializzare un albero genealocico con dei valori randomici e richiedere qual è il genitore con più figli. 
+
+Cercare poi di trovare un algoritmo che permetta di scoprire anche chi è il nonno/a con più nipoti. 
+
+Per un esempio più completo, potete scaricare il database "albero_genealogico.txt" dal Google Drive. 
+
+## 3 -- Difficile
 
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
 Definire una struct `Persona` con gli attributi `nome`,`madre`, `padre`, dove `madre` e `padre` sono puntatori a struct di tipo `Persona`.  
