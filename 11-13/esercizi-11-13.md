@@ -90,11 +90,11 @@ struct LinkedList {
 }; 
 ```
 
-### 3.1
+### 4.1
 
 Scrivere una funzione che permetta di stampare tutti gli item all'interno della lista.
 
-### 3.2
+### 4.2
 
 Scrivere una funzione che ricerchi un determinato item all'interno della lista e lo rimuova. 
 
