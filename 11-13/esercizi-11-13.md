@@ -100,7 +100,7 @@ Scrivere una funzione che ricerchi un determinato item all'interno della lista e
 
 **N.B**: non è necessario de-allocare l'oggetto, basta manipolare il campo `next`
 
-Usare la funzione creata in `3.1` per controllare che l'oggetto sia effettivamente stato rimosso
+Usare la funzione creata in `4.1` per controllare che l'oggetto sia effettivamente stato rimosso
 
 ## 5
 
