@@ -93,7 +93,7 @@ Estendere poi il programma a gestire `N` macchinette del caffè con `N` preso in
 Un'agenzia del farmaco ha un grosso database per categorizzare i farmaci che usa. Il database memorizza le seguenti informazioni:
 id del farmaco, numero di molecole, numero di altri farmaci con cui interagisce, numero di test condotti, numero di reazioni avverse. 
 
-Il database può essere scaricato dal Google Drive. 
+Il database può essere scaricato dal Google Drive (`farmaci_piccolo.txt`, `farmaci_grande.txt`). 
 
 `id numero_molecole numero_interazioni numero_test numero_reazioni`
 
@@ -117,7 +117,7 @@ Stampare a video qual è il genitore con più figli. Per fare questo potete aggi
 
 Cercare poi di trovare un algoritmo che permetta di scoprire anche chi è il nonno/a con più nipoti senza però modificare i campi della struttura ulteriormente. 
 
-Per un esempio più completo, potete scaricare il database "albero_genealogico.txt" dal Google Drive dove la prima riga indica il numero di Persone nel dataset e quelle seguenti sono nella forma `nome genitore1 genitore2`. 
+Per un esempio più completo, potete scaricare il database `albero_genealogico.txt` dal Google Drive dove la prima riga indica il numero di Persone nel dataset e quelle seguenti sono nella forma `nome genitore1 genitore2`. 
 
 \newpage
 
