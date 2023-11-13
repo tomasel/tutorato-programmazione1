@@ -13,8 +13,8 @@ Dato in ingresso un array di interi dall'utente (dovrà essere allocato dinamica
 
 ### Firma delle funzioni da scrivere
 
-- `int* filter(int*, int, int&)`
-- `int* filter_rec(int*, int, int, int&)`
+- `int* filter(int*, int, int&)`{.cc}
+- `int* filter_rec(int*, int, int, int&)`{.cc}
 
 
 ## 1.2
@@ -78,8 +78,8 @@ Prendere in input i valori iniziali.
 
 Implementare le funzioni 
 
-- `void addCoin(CoffeeMachine * machine, int val)` che aggiunge `val` centesimi al credito
-- `bool getCoffee(CoffeeMachine * machine)` che restituisce `true` se è possibile 
+- `void addCoin(CoffeeMachine * machine, int val)`{.cc} che aggiunge `val` centesimi al credito
+- `bool getCoffee(CoffeeMachine * machine)`{.cc} che restituisce `true` se è possibile 
   erogare un caffè (ovvero se il credito è almeno 39 centesimi e ci sono caffè rimanenti), 
   altrimenti restituisce `false` e non eroga il caffè.
 
@@ -119,16 +119,18 @@ Cercare poi di trovare un algoritmo che permetta di scoprire anche chi è il non
 
 Per un esempio più completo, potete scaricare il database "albero_genealogico.txt" dal Google Drive dove la prima riga indica il numero di Persone nel dataset e quelle seguenti sono nella forma `nome genitore1 genitore2`. 
 
+\newpage
+
 ## 2.4 -- Difficile
 
 Scrivere un programma per permettere la ricerca in un albero genealogico tramite il nome di una persona. 
 Definire una struct `Persona` con gli attributi `nome`,`madre`, `padre`, dove `madre` e `padre` sono puntatori a struct di tipo `Persona`.  
-Scrivere una funzione `cercaPersona (Persona**, const char*)` che prenda in input un puntatore all'albero e una stringa e cerchi se esiste una persona con quel nome (usare una procedura ricorsiva).
+Scrivere una funzione `cercaPersona (Persona**, const char*)`{.cc} che prenda in input un puntatore all'albero e una stringa e cerchi se esiste una persona con quel nome (usare una procedura ricorsiva).
 
 *Aiuto*:
 
-- inizializzare le persone che chiudono l'albero (es. i nonni) con `NULL`, in modo da poter controllarne la presenza ed evitare seg. fault.
-- può essere utile usare `typedef` per semplificare l'uso dei puntatori, ad esempio
+- inizializzare le persone che chiudono l'albero (es. i nonni) con `NULL`{.cc}, in modo da poter controllarne la presenza ed evitare seg. fault.
+- può essere utile usare `typedef`{.cc} per semplificare l'uso dei puntatori, ad esempio
 
 ```{.cc .numberLines}
 struct Persona {...};
@@ -139,8 +141,6 @@ typedef PuntatorePersona * AlberoPersona;  // punta all'intero
 ```
 
 in questo caso la funzione avrà una firma del tipo `cercaPersona (AlberoPersona, const char*)`.
-
-\newpage
 
 ## 2.5
 
@@ -166,5 +166,3 @@ Scrivere una funzione che ricerchi un determinato item all'interno della lista e
 **N.B**: non è necessario de-allocare l'oggetto, basta manipolare il campo `next`
 
 Usare la funzione creata in `4.1` per controllare che l'oggetto sia effettivamente stato rimosso
-
-
