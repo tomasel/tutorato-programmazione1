@@ -41,13 +41,12 @@ Scrivere un programma che ordini gli item di una linked list usando l'algoritmo 
 
 ## 3
 
-Scrivere un programma che data una Linked list, permetta di spostare una sezione arbitraria da una posizione della lista a un'altra. 
+Scrivere un programma che data una Linked list, permetta di spostare una sezione arbitraria di items in fondo alla lista. 
 
 La funzione dovrebbe avere questa signature: 
 
 ```.cc
-LinkedListNode* moveChunk(LinkedListNode* head, int startIndex, 
-                          int lenOfChunk, int endIndex); 
+LinkedListNode* moveChunk(LinkedListNode* head, int startIndex, int lenOfChunk); 
 ```
 
 ## 4
