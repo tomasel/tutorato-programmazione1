@@ -2,7 +2,7 @@
 header-includes:
     - '\usepackage[a4paper]{geometry}'
 documentclass: article
-fontsize: 12pt
+fontsize: 11pt
 ---
 
 # Manipolazione di strutture dati
