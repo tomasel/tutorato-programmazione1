@@ -79,7 +79,8 @@ dove si preferisce sprecare qualche byte per il valore `0` e semplificare la ges
 **Proprietà fondamentale dello heap**: *la priorità di un elemento deve essere sempre non superiore a quella dell'elemento genitore*, in questo caso `v[i] <= v[(int)(i/2)]`{.c}.  
 Dato un array di interi, la cui dimensione deve poter crescere dinamicamente, si chiede di implementare:
 
-- una funzione di ordinamento che rispetti la proprietà fonamentale e consenta di creare uno heap a partire da un array generato randomicamente
 - la funzione di inserimento di un elemento
+- la funzione di rimozione di un elemento
+- una funzione di ordinamento che rispetti la proprietà fondamentale e consenta di creare uno heap a partire da un array generato randomicamente
 
 È molto utile ragionare graficamente con l'ausilio della rappresentazione ad albero.
