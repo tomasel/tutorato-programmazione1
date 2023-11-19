@@ -1,5 +1,6 @@
 #include <iostream>
 
+// struttura usata nell'esercizio 1
 typedef struct dataStruct {
   int* data;
   int size, numData;
