@@ -1,9 +1,12 @@
 #include <iostream>
 using namespace std;
 
-#define matrix int**
+//#define matrix int**
+#define foo(x,y) x+y
 #define MAX 10
 #define MIN 1
+
+typedef int** matrix;
 
 void init_vec(int v[], int length){
     for(int i = 0; i < length; i++){
