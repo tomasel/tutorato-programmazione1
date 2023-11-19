@@ -83,4 +83,7 @@ Dato un array di interi, la cui dimensione deve poter crescere dinamicamente, si
 - la funzione di rimozione di un elemento
 - una funzione di ordinamento che rispetti la proprietà fondamentale e consenta di creare uno heap a partire da un array generato randomicamente
 
-È molto utile ragionare graficamente con l'ausilio della rappresentazione ad albero.
+*Consigli*: 
+
+- sfruttare l'implementazione della struttura all'esercizio 1
+- è molto utile ragionare graficamente con l'ausilio della rappresentazione ad albero.
