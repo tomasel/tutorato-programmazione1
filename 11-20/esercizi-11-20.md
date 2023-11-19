@@ -76,7 +76,7 @@ Ad esempio l'array `[0, 17, 13, 15, 11, 6, 7, 9, 5, 10, 1, 2, 4]` si rappresenta
 
 dove si preferisce sprecare qualche byte per il valore `0` e semplificare la gestione degli indici nel codice.
 
-**Proprietà fondamentale dello heap**: *la priorità di un elemento deve essere sempre non superiore a quella dell'elemento genitore, in questo caso* `v[i] <= v[(int)(i/2)]`{.c}.  
+**Proprietà fondamentale dello heap**: *la priorità di un elemento deve essere sempre non superiore a quella dell'elemento genitore*, in questo caso `v[i] <= v[(int)(i/2)]`{.c}.  
 Dato un array di interi, la cui dimensione deve poter crescere dinamicamente, si chiede di implementare:
 
 - una funzione di ordinamento che rispetti la proprietà fonamentale e consenta di creare uno heap a partire da un array generato randomicamente
