@@ -50,6 +50,36 @@ LinkedListNode* moveChunk(LinkedListNode* head, int startIndex,
                           int lenOfChunk, int endIndex); 
 ```
 
-## 5
+## 4
 
-Uno heap (binario)
+\begin{tiny}
+Esercizio tratto da \emph{Programmazione Scientifica - Barone, Marinari, Organtini, Ricci-Tersenghi}
+\end{tiny}
+
+Uno heap (binario) è un vettore `v[]` i cui elementi hanno tra di essi relazioni di parentela definite come segue:
+
+- `v[i]`{.c} ha come "genitore" l'elemento `v[(int)(i/2)]`{.c}
+- `v[i]`{.c} ha come "figli" gli elementi `v[2*i]`{.c} e `v[2*i+1]`{.c}
+
+Le relazioni di parentela si capiscono più chiaramente rappresentando l'array come un albero binario (attenzione, non è veramente un albero!).  
+Ad esempio l'array `[0, 17, 13, 15, 11, 6, 7, 9, 5, 10, 1, 2, 4]` si rappresenta come
+
+```
+            17
+         /      \
+      13          15
+    /    \       /  \
+  11      6     7    9
+ /  \    / \   /
+5   10  1   2 4
+```
+
+dove si preferisce sprecare qualche byte per il valore `0` e semplificare la gestione degli indici nel codice.
+
+**Proprietà fondamentale dello heap**: *la priorità di un elemento deve essere sempre non superiore a quella dell'elemento genitore, in questo caso* `v[i] <= v[(int)(i/2)]`{.c}.  
+Dato un array di interi, la cui dimensione deve poter crescere dinamicamente, si chiede di implementare:
+
+- una funzione di ordinamento che rispetti la proprietà fonamentale e consenta di creare uno heap a partire da un array generato randomicamente
+- la funzione di inserimento di un elemento
+
+È molto utile ragionare graficamente con l'ausilio della rappresentazione ad albero.
