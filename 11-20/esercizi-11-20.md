@@ -9,20 +9,9 @@ fontsize: 12pt
 
 ## 1
 
-Scrivere un programma che ordini gli item di una linked list usando l'algoritmo di sorting `BubbleSort`.
-
-## 2
-
-Scrivere un programma che data una Linked list, permetta di spostare una sezione arbitraria da una posizione della lista a un'altra. 
-
-La funzione dovrebbe avere questa signature: 
-
-```.cc
-LinkedListNode* moveChunk(LinkedListNode* head, int startIndex, 
-                          int lenOfChunk, int endIndex); 
-```
-
-## 3
+\begin{tiny}
+Esercizio tratto da \emph{Programmazione Scientifica - Barone, Marinari, Organtini, Ricci-Tersenghi}
+\end{tiny}
 
 Viene data la seguente struttura
 
@@ -45,3 +34,22 @@ La prima deve ricevere un nuovo elemento e modificare opportunamente i campi `nu
 Attenzione alla gestione dei valori `size` e `numData`!
 
 *Consiglio*: un modo efficiente per allocare nuova memoria è quello di raddoppiare `size` ogni qual volta `numData == size`{.cc}. In questo modo si è sicuri che il numero di operazioni per l'allocazione di nuova memoria cresca logaritmicamente con la lunghezza della struttura che è quindi un'operazione efficiente.
+
+## 2
+
+Scrivere un programma che ordini gli item di una linked list usando l'algoritmo di sorting `BubbleSort`.
+
+## 3
+
+Scrivere un programma che data una Linked list, permetta di spostare una sezione arbitraria da una posizione della lista a un'altra. 
+
+La funzione dovrebbe avere questa signature: 
+
+```.cc
+LinkedListNode* moveChunk(LinkedListNode* head, int startIndex, 
+                          int lenOfChunk, int endIndex); 
+```
+
+## 5
+
+Uno heap (binario)
