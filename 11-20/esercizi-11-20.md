@@ -34,8 +34,8 @@ void ResizeArray(dataStruct *orig, int size);
 Scrivere due funzioni per inserire e rimuovere un elemento dalla struttura. I prototipi delle funzioni sono:
 
 ```.cc
-void insertInBucket(dataStruct bucket, int newItem);
-int removeFromBucket(dataStruct bucket, int index);
+void insertInBucket(dataStruct *bucket, int newItem);
+int removeFromBucket(dataStruct *bucket, int index);
 ```
 
 La prima deve ricevere un nuovo elemento e modificare opportunamente i campi `numData` e `size`. La seconda deve ricevere l'indice di un elemento da rimuovere, modificare opportunamente le dimensioni e ritornare il valore rimosso.
