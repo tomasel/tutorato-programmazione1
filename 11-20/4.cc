@@ -18,6 +18,9 @@ void insertInHeap (dataStruct *pHeap, int newItem) {
 }
 
 // rimozione di un elemento (ricorsiva)
+// la logica di questa funzione consente di creare un heap
+// a partire da un array i cui elementi non rispettano
+// la condizione fondamentale di uno heap
 void heapify(int index, dataStruct *pHeap) {
   int left, right, max;
   int tmp;
