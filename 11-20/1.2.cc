@@ -35,10 +35,10 @@ int removeFromBucket(dataStruct *bucket, int index) {
   int deletedItem = bucket->data[index];
   bucket->data[--bucket->numData] = bucket->data[index];
   // per rispecchiare il comportamento di insertInBucket nella gestione di size
-  // si libera memoria solo quando numData è strettamente minore della metà di size
-  if (bucket->numData < (int)(bucket->size / 2)) {
+  // si libera memoria solo quando numData è strettamente minore di 1/4 di size
+  if (bucket->numData < (int)(bucket->size / 4)) {
     int *old_data = bucket->data;
-    bucket->data = new int[(int)(bucket->size / 2)];
+    bucket->data = new int[(int)(bucket->size / 4)];
     bucket->size /= 2;
     delete old_data;
   }
