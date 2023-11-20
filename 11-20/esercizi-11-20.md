@@ -23,10 +23,10 @@ struct dataStruct {
 ```
 
 utilizzata per gestire un array dinamico `data` di interi con il supporto di `size` -- che indica la dimensione massima di `data` -- e `numData` -- che invece indica il numero attuale di elementi presenti in `data`.  
-Scrivere una funzione che ridimensioni l'array `data`, del tipo:
+Scrivere una funzione che ridimensioni l'array `data` all'interno di `dataStruct`, del tipo:
 
 ```.cc
-void ResizeArray(int **orig, int size);
+void ResizeArray(dataStruct *orig, int size);
 ```
 
 ## 1.2
