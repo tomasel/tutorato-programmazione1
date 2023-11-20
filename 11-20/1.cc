@@ -1,8 +1,6 @@
 #include <cstdlib>
 #include <iostream>
 
-using namespace std;
-
 typedef struct dataStruct {
   int *data;
   int size, numData;
