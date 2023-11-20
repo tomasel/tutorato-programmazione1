@@ -2,12 +2,12 @@
 header-includes:
     - '\usepackage[a4paper]{geometry}'
 documentclass: article
-fontsize: 11pt
+fontsize: 10pt
 ---
 
 # Manipolazione di strutture dati
 
-## 1
+## 1.1
 
 \begin{tiny}
 Esercizio tratto da \emph{Programmazione Scientifica - Barone, Marinari, Organtini, Ricci-Tersenghi}
@@ -23,6 +23,14 @@ struct dataStruct {
 ```
 
 utilizzata per gestire un array dinamico `data` di interi con il supporto di `size` -- che indica la dimensione massima di `data` -- e `numData` -- che invece indica il numero attuale di elementi presenti in `data`.  
+Scrivere una funzione che ridimensioni l'array `data`, del tipo:
+
+```.cc
+void ResizeArray(int **orig, int size);
+```
+
+## 1.2
+
 Scrivere due funzioni per inserire e rimuovere un elemento dalla struttura. I prototipi delle funzioni sono:
 
 ```.cc
