@@ -9,7 +9,7 @@ fontsize: 12pt
 
 ## 1
 
-Scrivere le implementazioni delle funzioni definite all'interno del file `PriorityQ.h`. Il file `PriorityQ.h` e il main del programma possono essere scaricati dalla cartella `priority` su Google Drive. La struttura dati da implementare è una sorta di coda a priorità dove ad ogni elemento è appunto associata una priorità.
+Scrivere le implementazioni delle funzioni definite all'interno del file `PriorityQ.h` in un file `PriorityQ.cc`. Il file `PriorityQ.h` e il main del programma possono essere scaricati dalla cartella `priority` su Google Drive. La struttura dati da implementare è una sorta di coda a priorità dove ad ogni elemento è appunto associata una priorità.
 
 Quando si deve rimuovere un elemento dalla coda, dovrà essere rimosso per primo l'elemento con priorità più bassa. Per semplificare l'esercizio, la priority Queue è definita come una struttura con un array di code, ciascuna con la propria priorità.
 
