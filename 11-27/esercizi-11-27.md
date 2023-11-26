@@ -45,3 +45,21 @@ Le dimensioni delle liste in input sono generate casualmente e non è possibile 
 - Ricordarsi (importante!) di deallocare la memoria.
 - È consentito definire ed implementare funzioni ausiliarie che possano aiutarvi nella soluzione del problema.
 - All’interno di questo programma non è ammesso l’utilizzo di variabili globali o di tipo `static`{.cc} e di funzioni di libreria al di fuori di quelle definite in `iostream`{.cc}.
+
+\newpage
+
+# Alberi
+
+## 3
+
+L'ingegner Fuffox ha sviluppato uno strano metodo per superare l'esame di Programmazione 1 senza dover studiare. Ovviamente, per imparare il metodo è necessario seguire un seminario tenuto nientemeno che da Fuffox stesso.
+
+Data l'esclusività del metodo, per partecipare bisogna essere invitati: compreso Fuffox, ogni persona può invitare al massimo 3 persone, che a loro volta possono invitare al massimo 3 persone, e così via. Questa organizzazione gerarchica è rappresentata dalla struttura piramide definita nel file `3-ori.cc`, composta da persone aventi un codice d'invito e un numero variabile (fino a 3) di persone invitate. Al vertice della piramide sta ovviamente Fuffox.
+
+L'ing. Fuffox vuole anche capire quanto facilmente si diffondano gli inviti per il suo seminario. Scrivere la funzione ricorsiva `altezzaPiramide` che restituisca l'altezza della piramide, definita come il numero massimo di persone collegate da un invito, partendo da Fuffox (compreso) fino alla persona più in fondo alla piramide.
+
+Scrivere la funzione ricorsiva `calcolaGuadagno` che permetta all'ing. Fuffox di scoprire quanto potrà guadagnare da questo seminario. Per partecipare infatti è necessario versare una quota di partecipazione alla persona che ti ha invitato. Chi riceve delle quote d'invito può tenerne soltanto una percentuale definita dalle commissioni (`ricavoPersonale = commissioni * quoteInvito`). I soldi rimanenti quindi devono essere mandati alla persona di livello superiore (in aggiunta alla quota personale).
+
+Vista la dubbia legalità dell'intera operazione, l'ing. Fuffox vuole una strategia per sbarazzarsi velocemente di tutti i dati. Nonostante sia un ingegnere, sa che la memoria dinamica va sempre deallocata responsabilmente. Scrivere pertanto la funzione `deallocaPiramide` che svolga questa operazione correttamente.
+
+NOTA: È necessario non fare assunzioni su come è costruita la piramide. Le funzioni devono funzionare anche se una persona ha distribuito meno di 3 inviti.
