@@ -12,7 +12,7 @@ struct fake_pair {
 
 priorityQueue *init(int dim) {
   priorityQueue *pq = new priorityQueue;
-  pq->queue = new node *[dim];
+  pq->queue = new node* [dim];
   for (int i = 0; i < dim; i++) {
     pq->queue[i] = nullptr;
   }
