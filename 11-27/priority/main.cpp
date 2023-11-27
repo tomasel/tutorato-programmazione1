@@ -1,5 +1,5 @@
-#include <iostream>
 #include "PriorityQ.h"
+#include <iostream>
 
 using namespace std;
 
