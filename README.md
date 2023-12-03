@@ -4,7 +4,7 @@ Tutorato del corso di Programmazione 1 del professor Marco Roveri.
 
 ## Files
 
-I file markdown contengono un preambolo necessario per la formattazione. Si possono compilare con `pandoc`
+I file markdown contengono un preambolo necessario per la formattazione. Si possono compilare con [pandoc](https://pandoc.org/) (serve aver installato [TeX](https://tug.org/texlive/)!)
 
 ```sh
 pandoc -f markdown -t pdf <file_in>.md -o <file_out>.pdf
