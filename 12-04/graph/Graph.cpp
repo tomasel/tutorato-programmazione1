@@ -177,4 +177,3 @@ void dependences(graph &g, int node) {
   cout << "Dependencies set:";
   print_set(s);
 }
-
