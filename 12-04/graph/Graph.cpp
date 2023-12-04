@@ -166,7 +166,7 @@ void dependences(graph &g, int node) {
     st.pop();
     if (!contains(s, curr_node)) {
       for (int i = 0; i < g.number_of_nodes; i++) {
-        if (g.adjMatrix[curr_node][i] && !contains(s, i)) {
+        if (g.adjMatrix[i][curr_node] && !contains(s, i)) {
           st.push(i);
         }
       }
