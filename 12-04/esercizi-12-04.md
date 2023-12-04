@@ -5,7 +5,7 @@ documentclass: article
 fontsize: 12pt
 ---
 
-## All together
+# All together
 
 Scrivere in un file `Graph.cpp` le implementazioni delle funzioni definite all'interno del file `Graph.h`.
 I file `Graph.h` e il `main` del programma possono essere scaricati dalla cartella `graph` su Google Drive.
