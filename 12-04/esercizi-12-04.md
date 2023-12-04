@@ -36,25 +36,25 @@ NOTE:
 Estraendo le dipendenze in `graph1.txt` si ottiene una rappresentazione come lista di adiacenza
 
 ```
-0 -> [1, 2, 3, 4, 5]
-1 -> [2, 4, 5]
+0 -> [1, 3]
+1 -> [2, 5]
 2 -> []
-3 -> [0, 1, 2, 4, 5]
+3 -> [0, 2, 4]
 4 -> [2]
-5 -> [2, 4]
+5 -> [4]
 ```
 
 oppure come matrice di adiacenza
 
 |   |  0 |  1 |  2 |  3 |  4 |  5 |
 |---|----|----|----|----|----|----|
-|0  |  - |  1 |  1 |  1 |  1 |  1 |
-|1  |  0 |  - |  1 |  0 |  1 |  1 |
+|0  |  - |  1 |  0 |  1 |  0 |  0 |
+|1  |  0 |  - |  1 |  0 |  0 |  1 |
 |2  |  0 |  0 |  - |  0 |  0 |  0 |
-|3  |  1 |  1 |  1 |  - |  1 |  1 |
+|3  |  1 |  0 |  1 |  - |  1 |  0 |
 |4  |  0 |  0 |  1 |  0 |  - |  0 |
-|5  |  0 |  0 |  1 |  0 |  1 |  - |
+|5  |  0 |  0 |  0 |  0 |  1 |  - |
 
-si possono rappresentare le precedenti strutture graficamente come
+o graficamente
 
 ![](./graph.svg)
