@@ -1,6 +1,6 @@
 # tutorato-programmazione1
 
-Tutorato del corso di Programmazione 1 del professor Marco Roveri.
+Tutorato del corso di Programmazione 1 del professor Marco Roveri per l'A.A. 2023/24.
 
 ## Files
 
